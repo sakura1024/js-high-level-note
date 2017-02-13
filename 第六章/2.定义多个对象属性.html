@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h5>Object.defineProperties(obj,{属性名:{属性值},属性名:{属性值},属性名:{属性值}}),定义多个对象属性</h5>
+		<h5>Object.getOwnPropertyDescriptor(book1,'name').configurable，获取对象book1属性name的特性configurable</h5>
+		<script type="text/javascript">
+			var book={};
+			Object.defineProperties(book,{
+				_year:{value:2016},
+				editon:{value:1},
+				year:{
+					get:function(){return this._year;},
+					set:function(newValue){
+						if(newValue>2016){
+							this.editon+=newValue-2015;    //这貌似没有起作用哦  
+						}
+					}
+				}
+			});
+			book.year=2017;
+			console.log(book);
+			
+			//读取属性的特性
+			var book1={name:2017,age:2};
+			Object.defineProperty(book1,'name',{configurable:false});
+			var des=Object.getOwnPropertyDescriptor(book1,'name');  //参1:指定对象  参2:指定对象的属性
+			console.log(des.configurable);  //获取指定对象属性的值 false
+			console.log(des.writable);  //获取指定对象属性的值 true
+		</script>
+	</body>
+</html>
