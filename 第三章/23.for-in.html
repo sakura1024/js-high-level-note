@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>for-in用来枚举对象的属性</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			for(var proName in window){
+				console.log(proName)
+			}
+			console.log('----------------');
+			var oNull=null;
+			for (var pro in oNull){
+				console.log(pro);   //没有报错
+			}
+			var oUndefined=undefined;
+			for (var prop in oUndefined) {
+				console.log(prop);   //没有报错
+			}
+		</script>
+	</body>
+</html>

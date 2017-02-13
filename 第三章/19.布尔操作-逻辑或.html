@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{line-height: 25px;}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>||</li>
+			<li>当第一个值为真时,结果始终原样返回第一个值</li>
+			<li>当第一个值为假时,第二个值无论真假，结果始终原样返回第二个值</li>
+		</ul>
+		<script type="text/javascript">
+			var first=true;
+			var first=1;
+			var first={};
+			var first='string';
+			console.log('--------------当第一个值为真时,结果始终原样返回第一个值--------');
+			console.log(first||1);    //true  1  {}   string
+			console.log(first||0);    //true  1  {}   string
+			console.log(first||false);   //true  1  {}   string
+			console.log(first||NaN);   //true  1  {}   string
+			console.log(first||undefined);   //true  1  {}   string
+			console.log(first||null);   //true  1  {}   string
+			
+			
+			var oFalse='';
+			console.log('--------------当第一个值为假时,第二个值无论真假，结果始终原样返回第二个值-------------');
+			console.log(oFalse||1);    //1
+			//第二个值为假值
+			console.log(oFalse||0);    //0
+			console.log(oFalse||false);   //false
+			console.log(oFalse||NaN);   //NaN
+			console.log(oFalse||undefined);   //undefined
+			console.log(oFalse||null);   //null
+			//第二个值为真值
+			console.log(oFalse||123);   //123
+			console.log(oFalse||'string');   //string
+		</script>
+	</body>
+</html>

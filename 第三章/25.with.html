@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h3>注意：</h3>
+		<ul>
+			<li>严格模式下，不允许使用with语句，否则会报错</li>
+		</ul>
+		<script type="text/javascript">
+		/*
+			var qs=location.search.substring(1);
+			var hostName=location.hostname;
+			var url1=location.href;
+			console.log(qs);
+			console.log(hostName);  //127.0.0.1
+			console.log(url1); //http://127.0.0.1:8020/js%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/%E7%AC%AC%E4%B8%89%E7%AB%A0/25.with.html
+		*/
+		//'use strict';  //严格模式下，不允许使用with语句，否则会报错
+		with (location){
+			var qs=search.substring(1);
+			var hostName=hostname;
+			var url1=href;
+		}
+			console.log(qs)
+			console.log(hostName); //127.0.0.1
+			console.log(url1);//http://127.0.0.1:8020/js%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/%E7%AC%AC%E4%B8%89%E7%AB%A0/25.with.html
+		</script>
+	</body>
+</html>

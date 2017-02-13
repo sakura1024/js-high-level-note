@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<body>
+	<h3>在js中return false的作用一般是用来取消默认动作的。</h3>
+	<a href="www.baidu.com" id="a">点击</a>
+	
+	<script type="text/javascript">
+		document.querySelector('#a').onclick=function(){
+			alert("hello");
+			//return false;//不执行dom节点a的默认跳转动作href，只执行click事件
+			return true;   //先执行dom节点a的click事件，再执行a自身的默认跳转动作href
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{line-height: 25px;}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>&&</li>
+			<li>第一个为真值时，第二个值，无论真假，始终原样返回第二个值</li>
+			<li>第一个为假值时，无论第二个值真假，始终返回第一个值</li>
+		</ul>
+		<script type="text/javascript">
+			var found=true;
+			console.log('-----第一个为真值时，第二个值，无论真假，始终原样返回第二个值----------');
+			var result=found&&2; 
+			console.log(result);//
+			
+			var result1=found&&'';
+			console.log(result1); //空串
+			
+			var result2=found&&NaN;
+			console.log(result2); //NaN
+			
+			var result3=found&&0;
+			console.log(result3); //0
+			
+			console.log('-----第一个为假值时，无论第二个值真假，始终返回第一个值----------');
+			var result4=false&&1;
+			console.log(result4); //false
+			
+			var result5=0&&1;
+			console.log(result5); //0
+			
+			var result6=null&&1;
+			console.log(result6); //null
+			
+			var result7=undefined&&false;
+			console.log(result7); //undefined
+			
+			var result8=''&&false;
+			console.log(result8); //空串
+			
+			var result8=NaN&&false;
+			console.log(result8); //NaN
+			
+		</script>
+	</body>
+</html>

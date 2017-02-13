@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var num=0;
+			for (var i=0;i<10;i++) {
+				for (var j=0;j<10;j++) {
+					if (j==1) {
+//						break;   //break只是跳出了内层循环 
+						 continue;//continue跳出的是j=1这次循环，j++后，会继续
+					}
+					num++;  
+				}
+			}
+			console.log(num);
+		</script>
+	</body>
+</html>

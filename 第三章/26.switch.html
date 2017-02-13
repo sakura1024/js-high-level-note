@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h3>之所以给switch传得参数是true，是因为每个case值都返回一个布尔值，当返回得布尔值为true时，则是答案</h3>
+		<script type="text/javascript">
+			var num=25;
+			console.log('------之所以给switch传得参数是true，是因为每个case值都返回一个布尔值，当返回得布尔值为true时，则是答案---------')
+			switch (true){  //若参数为num，则执行default后面得代码
+				case num>=0&&num<10:
+					console.log(num+'小于10')
+					break;
+				case  num>=10&&num<20:
+					console.log(num+'大于10小于20')
+					break;
+				case  num>=20&&num<30:
+					console.log(num+'大于20小于30')
+					break;
+				default:
+					console.log(num+'不是数值')
+					break;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h3>严格模式下，不能定义名为eval、arguments的变量;非严格模式下，不会报错，但是不建议</h3>
+		<script type="text/javascript">
+			'use strict';
+			var eval="hello";
+			console.log(eval); // Uncaught SyntaxError: Unexpected eval or arguments in strict mode
+		</script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h3>instanceof检测某个值是什么类型的对象</h3>
+		<script type="text/javascript">
+			var  arr=[1,2,3];
+			var obj={a:1,b:2};
+			var fun=function(){
+				return 2323;
+			}
+			console.log('---- 引用类型-----------');
+			console.log(arr instanceof Array); //true
+			console.log(obj instanceof Object);//true
+			console.log(fun instanceof Array);//false
+			console.log(fun instanceof Function);//true
+			console.log('---------基本数据类型---------');
+			var num=123;
+			console.log(123 instanceof Number);  //false
+			console.log('------------------')
+			console.log(Object.prototype.toString.call(arr)=='[object Array]');
+		</script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<h4>无论是indexOf还是lastIndexOf，两者的第一个参数，在和数组
+			中的元素比较时，都是从左向右比较，并且只要找到满足条件的值，
+			即终止查询—只是lastIndexOf确定的是该值从后向前的位置，而
+			indexOf确幸的是该值从前向后的位置，并且first和last都是从0开始</h4>
+		<script type="text/javascript">
+			var arr = ['0', '1', '2', '3', '4', '5', '7', '6', '5', '4', '3', '2', '1', '0'];
+			console.log(arr.indexOf(3)); //-1  注意比较时，是用全等来比较的
+			//并且需要注意的是，数组中后面仍有'3',但是只返回了前面的'3'的位置
+			//说明indexOf只要找到一个满足条件的结果，即终止查找
+			console.log(arr.indexOf('3')); //3  
+			//说明lastIndexOf参数和数组中的值比较时，并不是从后向前比较的、
+			//仍旧是从前向后比较的，在前面只要找到满足的条件的，即终止查找，
+			//并且返回该值在数组中从后向前的位置（末尾从0开始，从右向左，依次是0，1，2，3，4....）
+			console.log(arr.lastIndexOf('5')); //8而不是5
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var oUndefined=undefined;
+			var oNull=null;
+			var obj={a:1,b:2};
+			var oTrue=true;
+			var str='string';
+			var result1=str+oUndefined;  //string+undefined
+			var result2=str+oNull;   //string+null
+			var result3=obj.toString()+str;   //[object Object]string???
+			var result4=str+oTrue;    //string+true
+			console.log(result1);
+			console.log(result2);
+			console.log(result3);
+			console.log(result4);
+			console.log(obj.valueOf()+str);  //[object Object]string???
+			var obj={a:1,b:2};
+			console.log('------迷惑之中-----------');
+			console.log(obj.toString());   //[object Object]
+			console.log(typeof obj.toString());   //string
+			console.log(JSON.stringify(obj));   //{"a":1,"b":2}
+			console.log(obj.valueOf());  //{"a":1,"b":2}
+		</script>
+	</body>
+</html>

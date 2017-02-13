@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h3>js中没有块级作用域{}</h3>
+		<script type="text/javascript">
+			console.log('----if没有块级作用域----');
+			if(true){
+				var temp="temp";  //没有受{}的影响，temp是全局变量
+			}
+			console.log(temp);  //temp
+			
+			console.log('----for没有块级作用域----')
+			for (var i=0;i<9;i++) {
+				console.log(i);
+			}
+			console.log('------跳出for循环之后，i仍然可以检测到，说明i是全局变量--------');
+			
+			console.log(i);
+		</script>
+	</body>
+</html>

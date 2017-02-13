@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<h3>with会将指定的对象添加到作用域链中，catch块也可以</h3>
+	<script type="text/javascript">
+		function baiduUrl(){
+			var qs='?debug=true';
+			with(location){
+				var url1=href+qs;
+				var a=23;
+			}
+			return url1;
+//				return a;  //23
+		}
+		console.log(baiduUrl());
+	</script>
+	</body>
+</html>

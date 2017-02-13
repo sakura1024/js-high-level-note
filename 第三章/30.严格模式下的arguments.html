@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h3>严格模式下，arguments数值的赋值将无效</h3>
+		<script type="text/javascript">
+			'use strict';
+			function sum(num1,num2){
+				arguments[1]=10;
+				console.log(arguments[0]+num2);  
+			}
+			sum(2,3);//5    arguments[1]不会覆盖调用函数中的3 
+			sum(2);//NaN   num2的值是undefined，并且不会被后面的arguments[1]=10覆盖
+		</script>
+	</body>
+</html>

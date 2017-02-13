@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>函数内的全局变量</title>
+	</head>
+	<body>
+		<h3>函数内的全局变量啥时候才开始有定义：函数被调用一次之后，才有定义</h3>
+		<script type="text/javascript">
+		/*
+			  function test(){
+			  	mess="hi";
+			  }
+			  console.log(mess);   //Uncaught ReferenceError: mess is not defined
+		*/
+		/*
+		function test(){
+			mess="hi";
+		}
+		test();   //调用之后 mess变量才有了定义，才可以在函数外部的任何地方被访问到
+		console.log(mess); //hi
+		*/
+		
+		</script>
+		
+	</body>
+</html>

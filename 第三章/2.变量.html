@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<h3>严格模式下，给未声明的变量赋值会报错</h3>
+		<script type="text/javascript">
+			'use strict';
+
+			function test() {
+				mess = "hi";  //未经声明便赋值的变量  
+			}
+			test();
+			console.log(mess); //Uncaught ReferenceError: mess is not defined
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>八进制</title>
+	</head>
+	<body>
+		<h3>Octal literals are not allowed in strict mode.</h3>
+		<h3>在严格模式,八进制文字是不允许使用的。相反地，严格模式下，十六进制可以使用</h3>
+		<script type="text/javascript">
+//			'use strict';   //严格模式下，会报错
+			var octNum=070;   //56  （8的一次方*7）
+			var octNum1=079;  //79  (9超过了8，前面的0失效)
+			var octNum2=08;   //8  (8超过了8，前面的0失效)
+			console.log(octNum);
+			console.log(octNum1);
+			console.log(octNum2);
+			
+			
+			console.log('-------十六进制-------')
+			var hexNum=0xA;
+			var hexNum=0x1f;
+			console.log(hexNum);
+		</script>
+	</body>
+</html>

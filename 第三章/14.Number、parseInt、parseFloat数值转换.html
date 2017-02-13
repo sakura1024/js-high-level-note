@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Number()</title>
+	</head>
+
+	<body>
+		<h4>Number
+			<ul>
+				<li>Number会忽略前导0及空格，此外，</li>
+				<li>能解析十进制，十六进制</li>
+				<li>true为1，false、空串、null都为0，undefined为NaN</li>
+			</ul>
+		</h4>
+		<h4>parseInt
+			<ul>
+			<li>parseInt也是会忽略前导0及空格</li>
+			<li>能解析十进制，十六进制</li>
+			<li>parseInt是否解析科学计数法:解析？字符串类型的不解析，数值类型的解析</li>
+			<li>true、false、null、undefined均解析为NaN</li>
+			<li>此外不能解析科学计数法，不识别e</li>
+			</ul>
+		</h4>
+		<h4>parseInt(num,type)
+			<ul>
+			<li>num为数值，type为解析的类型</li>
+			<li>能解析二进制、八进制、十进制，十六进制</li>	
+			<li>ex：parseInt('af',16)</li>	
+			<li>ex：parseInt('010',8)</li>	
+			</ul>
+		</h4>
+		
+		<h4>parseFloat
+			<ul>
+			<li>parseFloat是否解析十六进制、八进制（不识别，会忽略前导0）</li>
+			<li>parseFloat是否解析科学计数法:解析(字符串和数值类型的均解析)</li>	
+			<li>parseFloat是否解析true、false、null、undefined？no，结果均为NaN</li>
+			<li>此外对于能解析为整数的则解析为整数，与Number类似，ex：2.0解析为2</li>
+			</ul>
+		</h4>
+		<script type="text/javascript">
+			console.log(Number(true)); //1
+			console.log(Number(false)); //0
+			console.log(Number('')); //0
+			console.log(Number(undefined)); //NaN
+			console.log(Number('12')); //12
+			console.log(Number('123')); //123
+			console.log(Number('011')); //11
+			console.log(Number('01.1')); //1.1
+			console.log(Number('0xa')); //10
+			console.log(Number('n123')); //NaN
+			console.log(Number(' 123')); //123
+			console.log(Number(' 123.0')); //123
+			console.log(Number({})); //NaN
+
+			console.log('--------parseInt-------')
+			console.log(parseInt('000')); //0
+			console.log(parseInt('')); //NaN
+			console.log(parseInt(' 123')); //123  
+			console.log(parseInt('  -123')); //-123
+			console.log(parseInt('  +123')); //123
+			console.log(parseInt('0123')); //123
+			console.log(parseInt(' 0123')); //123
+			console.log(parseInt('012')); //12   没有识别八进制0
+			console.log(parseInt('123.123')); //123
+			console.log(parseInt('0xa')); //10
+			console.log(parseInt('0xag')); //10
+			console.log(parseInt('0xaf')); //175
+			console.log(parseInt('123a  b12')); //123
+			console.log('------parseInt是否解析科学计数法:解析？字符串类型的不解析，数值类型的解析-----------');
+			console.log(parseInt('123e2')); //注意这：结果是123，不是12300
+			console.log(parseInt(123e2)); //注意这：结果是123，不是12300
+			console.log('------parseInt是否解析true、false、null、undefined-----------');
+			console.log(parseInt(true)); //NaN
+			console.log(parseInt(false)); //NaN
+			console.log(parseInt(undefined)); //NaN
+			console.log(parseInt(null)); //NaN
+
+			console.log('-----parseInt(str,type)-----');
+			console.log(parseInt('af', 16)); //175
+			console.log(parseInt('af')); //NaN
+			console.log(parseInt('10', 2)); //2
+			console.log(parseInt('10', 8)); //8
+			console.log(parseInt('10', 10)); //10
+			console.log(parseInt('10', 16)); //16
+			
+			console.log(parseInt('010', 8)); //8
+			console.log(parseInt('0x10', 16)); //16
+			
+			
+			console.log('------parseFloat()-----------');
+			console.log(parseFloat('.1'));    //0.1
+			console.log(parseFloat(' .1'));   //0.1
+			console.log(parseFloat('2a.1'));  //2
+			console.log(parseFloat('2.a1'));  //2
+			console.log(parseFloat('2.1a'));  //2.1
+			console.log(parseFloat('2.0'));   //2
+			console.log(parseFloat('2.0a'));  //2
+			console.log('------parseFloat是否解析十六进制、八进制（不识别，会忽略前导0）-----------');
+			console.log(parseFloat('010'));   //10
+			console.log(parseFloat('0xaf'));  //0
+			console.log('------parseFloat是否解析科学计数法:解析-----------');
+			console.log(parseFloat(12e2));
+			console.log(parseFloat('12e2'));
+			console.log('------parseFloat是否解析true、false、null、undefined-----------');
+			console.log(parseFloat('true'));   //NaN	
+			console.log(parseFloat('false'));//NaN	
+			console.log(parseFloat('null'));//NaN	
+			console.log(parseFloat('undefined'));//NaN	
+		</script>
+	</body>
+
+</html>

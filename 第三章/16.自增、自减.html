@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>自增、自减运算符</title>
+</head>
+<body>
+	<script type="text/javascript">
+		console.log('------包含有效数字字符时-------');
+		var str="011";     //当str=0x11,时，下面两个结果分别为17，19
+		var str1=str++;
+		var str2=++str;
+		console.log(str1);  //11
+		console.log(str2);   //13
+		
+		console.log('-------包含有效数字字符时------');
+		var str11='011';
+		console.log(++str11);   //12
+		console.log(str11++);   //12
+		
+		console.log('-----不包含有效数字字符--------');
+		var str22="str";
+		console.log(str22++);  //NaN
+		
+		console.log('----------布尔类型的:自动调用了数值转换Number()函数----------------');
+		var found=true;   //1
+		var found1=++found;
+		console.log(found1);  //2
+		
+		var ofalse=false;   //0
+		var ofalse1=++ofalse;  
+		console.log(ofalse1);   //1
+		
+		
+		console.log('----------浮点数值----------------');
+		var oFloat=2.1;
+		var oFloat1=++oFloat;
+		console.log(oFloat1);  //3.1
+		
+	</script>
+</body>
+</html>

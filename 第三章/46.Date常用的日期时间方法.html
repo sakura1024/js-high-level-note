@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var date1=new Date('2/12/2017 12:32:31');
+//			var date1=new Date('2/12/2017 00:02:00');
+			console.log(date1.getTime()); //毫秒
+			console.log(date1.getDay()); //返回一周中的星期几(周一到周日依次为：1、2、3、4、5、6、0)
+			console.log(date1.getDate()); //返回多少号
+			console.log(date1.getMonth());  //0-11分别代表12个月
+			console.log(date1.getFullYear());//2017
+			console.log(date1.getHours()); //12 (0-23)
+			console.log(date1.getMinutes());//32 (0-59)
+			console.log(date1.getSeconds());//31 (0-59)
+			
+			//date1.setDay();//没有该方法
+			date1.setDate(15);
+			console.log(date1);  //Wed Feb 15 2017 12:32:31 GMT+0800 (CST)
+			
+			date1.setMonth(3);
+			console.log(date1);//Sat Apr 15 2017 12:32:31 GMT+0800 (CST)
+			
+			date1.setFullYear(2016);
+			console.log(date1); //ri Apr 15 2016 12:32:31 GMT+0800 (CST)
+			
+			date1.setHours(23); 
+			console.log(date1);//Fri Apr 15 2016 23:32:31 GMT+0800 (CST)
+			
+			date1.setMinutes(59); 
+			console.log(date1);//Fri Apr 15 2016 23:59:31 GMT+0800 (CST)
+			
+			date1.setSeconds(58); 
+			console.log(date1);//Fri Apr 15 2016 23:59:58 GMT+0800 (CST)
+		</script>
+	</body>
+</html>

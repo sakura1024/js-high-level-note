@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>转换为字符串</title>
+		<style type="text/css">
+			*{line-height: 25px;}
+		</style>
+	</head>
+	<body>
+		<h3>value.toString():</h3>
+		<ul>
+			<li>数值、布尔、对象、字符串都有自己的toString()</li>
+			<li>null和undefined没有toString()方法</li>
+			<li>其他的基本上都是原样输出</li>
+			<li>{}.toString();===>[object Object]</li>
+		</ul>
+		<hr />
+		
+		<h3>toString()转换数值为字符串时，可以指定参数，参数为输出数值的基数（即按照多少进制输出）</h3>
+		<ul>
+			<li>默认情况下，toString()以十进制格式输出数值对应的字符串</li>
+			<li>而通过传递基数，toString()可以输出二进制、八进制、十进制、十六进制</li>
+		</ul>
+		<hr />
+		<h4>String(value)</h4>
+		<ul>
+			<li>String(value):将任何类型的值转换为字符串，包括null、undefined</li>
+		</ul>
+		<script type="text/javascript">
+			var age=11;
+			var found=true;
+			var found1=false;
+			var found2=NaN;
+			var found3='';
+			var found4={};
+			
+			var obj=null;
+			var obj1=undefined;
+			console.log('-------value.toString()-----------')
+			console.log(age.toString());  //11
+			console.log(found.toString()); //true
+			console.log(found1.toString()); //false
+			console.log(found2.toString()); //NaN
+			console.log(found3.toString()); //''
+			console.log(found4.toString()); //[object Object]
+			console.log('----------null和undefined没有toString()方法-------------')
+			//console.log(obj.toString()); //Uncaught TypeError: Cannot read property 'toString' of null
+			//console.log(obj1.toString()); //Uncaught TypeError: Cannot read property 'toString' of undefined
+			console.log('-----toString()传递数值基数-------------');
+			var num=10;
+			console.log(num.toString(2)); //1010
+			console.log(num.toString(8)); //12
+			console.log(num.toString(10)); //10
+			console.log(num.toString(16)); //a
+			console.log('-----String(value):将任何类型的值转换为字符串，包括null、undefined-------------');
+			console.log(String(obj));  //null
+			console.log(String(obj1));   //undefined
+		</script>
+	</body>
+</html>

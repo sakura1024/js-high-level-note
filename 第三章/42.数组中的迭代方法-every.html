@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+<script type="text/javascript">
+var arr=[1,2,3,6,4,7,4,6,3,2,1];
+console.log('----every，所有数组元素满足某个条件时，返回ture--------')
+var everyResult=arr.every(function(item,index,array){
+	//遍历数组中的每一项，当每一项都满足值>=2时，arr.every()函数返回true，否则返回false
+	return (item>=2);   
+});
+console.log(everyResult); //false 
+
+console.log('----some，数组元素有一个满足某个条件时，返回ture--------')
+var someResult=arr.some(function(item,index,array){
+	//遍历数组中的每一项，只要有一项满足条件>=2,arr.some()函数返回true，否则返回false
+	return (item>=2);   
+});
+console.log(someResult); //true
+
+console.log('----filter，数组元素有满足条件时，则复制出来，生成新的数组--------')
+var filterResult=arr.filter(function(item,index,array){
+	//遍历数组中的每一项，满足条件的数组元素组合在一起，生成新的数组
+	return (item>=2);   
+});
+console.log(filterResult); //2,3,6,4,7,4,6,3,2
+
+console.log('----map，对数组中的每一项进行相同的操作，例如加减乘除--------');
+var mapResult=arr.map(function(item,index,array){
+	//对数组中的每一项进行相同的操作*2，然后返回*2后的新数组
+	return item*2;   
+});
+console.log(mapResult); //[2,4,6,12,8,14,8,12,6,4,2]
+
+console.log('----forEach，没有返回值--------');
+var forEachResult=arr.forEach(function(item,index,array){
+	//对数组中的每一项进行相同的操作*2，然后返回*2后的新数组
+	item=item+2;   
+});
+</script>
+	</body>
+</html>

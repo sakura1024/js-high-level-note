@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		    /*
+			//var value='mAt';
+			var value='catGat'
+			var reg=/[bc]at/gi;
+			console.log(reg.test(value));  //true
+			*/
+var str='hellomykitty';
+var reg=/^he[a-z]*y+$/g;  //以he开头，中间0或多个[a-z]，以一个或多个y结尾
+console.log(reg.test(str)); //true
+console.log(str.search(reg));  //0
+console.log(str.match(reg)); //['hellomykitty']
+
+
+ //g:全局
+ //i:忽略大小写
+ //m:多行
+ 
+ 
+ //.:任意字符，除了换行符和行结束符
+ 
+ //\w:英文、数字、下划线
+ //\d:数字[0-9]
+ //\s:空白字符
+ 
+ //\W:除英文、数字、下划线之外的
+ //\D:除数字之外的
+ //\S:除空白字符之外的
+ 
+ //*:0个或多个
+ //+:1个或多个
+ //?:0个或一个
+ 
+ //正则方法：test()
+ //reg.test(str); 返回字符串中的字符是否符合正则，符合则返回true，反之返回false
+ //字符串方法：search、match
+ //str.search(reg);  返回找到相应字符的第一个位置
+ //str.match(reg);  返回字符串中符合正则的数组
+ 
+ 			var str1='bbat';
+ 			var reg=/b.t$/g;
+ 			console.log(reg.test(str1)); //true
+ 			
+ 			
+ 			var str2='[bc]at';
+ 			var reg=/\[bc\]at/g;
+ 			console.log(reg.test(str2)); //true
+ 			
+ 			var str3='\.at';
+ 			//下面的有问题
+// 			var reg=/.at/g;
+// 			console.log(reg.test(str3));
+		</script>
+	</body>
+</html>

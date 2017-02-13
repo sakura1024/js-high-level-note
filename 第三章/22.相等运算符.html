@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{line-height: 25px;}
+		</style>
+	</head>
+	<body>
+		<h3>相等和全等的区别：</h3>
+		<ul>
+			<li>相等(==)不比较数据类型</li>
+			<li>全等(===)比较数据类型</li>
+		</ul>
+		<h3>相等---特殊的：</h3>
+		<ul>
+			<li>null==undefined</li>
+			<li>true==1</li>
+			<li>false==0</li>
+			<li><dl>var obj={age:10,name:'linda'}<dt></dt><dd>obj==obj</dd></dl></li>
+		</ul>
+		<h3>不相等---特殊的：</h3>
+		<ul>
+			<li>NaN!=NaN</li>
+			<li>{a:1,b:2}!={a:1,b:2}</li>
+		</ul>
+		<script type="text/javascript">
+			console.log('-----字符串和数值比较------------')
+			console.log('123'==123); //true
+			console.log('true'==1); //false
+			console.log('-----布尔和数值比较------------')
+			console.log(true==1); //true
+			console.log(false==0);//true
+			console.log('-----undefined和数值比较------------')
+			console.log(undefined==0);//false
+			console.log('-----null和数值比较------------')
+			console.log(null==0);//false
+			console.log('-----对象和数值比较------------')
+			console.log({}==0);//false
+			console.log('-----null和undefined比较------------')
+			console.log(null==undefined);//true
+			console.log('-----任何变量和NaN比较，均为false（包括NaN）------------')
+			console.log(NaN==NaN);//false
+			console.log(NaN==null);//false
+			console.log('-----对象和对象做比较:比较的是，对象的内存空间是否是空一个地址------------');
+			var obj={a:2,b:3};
+			console.log({a:1,b:2}=={a:1,b:2});//false
+			console.log(obj==obj);//true
+		</script>
+	</body>
+</html>

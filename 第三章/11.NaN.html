@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h3>负无穷、最小值、最大值、正无穷均属于数值</h3>
+		<h4>isNaN(num),参数为NaN时，结果为true；此外，参数为非数值时，结果也为true（例如：当参数为字符串时）；参数为数值时，结果false</h4>
+		<script type="text/javascript">
+			console.log(5/0);  //Infinity
+			console.log(0/0)  //NaN
+			console.log(isNaN(Infinity));  //false
+			console.log('Number.MAX_VALUE:'+Number.MAX_VALUE); //1.7976931348623157e+308
+			console.log('Number.MIN_VALUE:'+Number.MIN_VALUE); //5e-324
+			console.log(isNaN(Number.MAX_VALUE)); //false
+			console.log(isNaN(Number.MIN_VALUE));  //false
+			console.log(isNaN(0/0));  //true
+			console.log(isNaN(5/0));   //false
+			console.log(isNaN("string"))   //true
+			console.log('----------Infinity相关的除法---------------')
+			console.log(5/Infinity); //0
+			console.log(Infinity/0); //Infinity
+			console.log(Infinity/5); //Infinity
+			console.log('-------除法时：操作数不是数值-----------');
+			console.log('21'/3);
+			console.log(''/1);  //0
+			console.log(true/1);//1   调用了Number()
+			console.log('true'/1);//NaN
+			
+			console.log('-------除法时：操作数不是整数时-----------')
+			console.log(15.5/5);    //3.1
+			
+			console.log('-------取余：操作数不是整数时-----------')
+			console.log('-------结果我蒙了-----------')
+			console.log(15.5%5);    //0.5
+			console.log(15.2%5);    //0.1999999999999993
+			console.log(2.0%5);    //2
+			console.log(15.5%1.5)   //0.5
+		</script>
+	</body>
+</html>

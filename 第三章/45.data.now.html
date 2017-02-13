@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var start=Date.now();
+			console.log(start);  //结果显示为毫秒
+			var arr=[1,2,3,4,5,6,7,8]
+			var reduceResult=arr.reduce(function(prev,cur){
+				return prev+cur;
+			})
+			console.log(reduceResult); //36  数组各项相加，和为36
+			var Stop=Date.now();
+			console.log(Stop);//结果显示为毫秒
+			var reduceTime=Stop-start;
+			console.log(reduceTime); //3毫秒
+		</script>
+	</body>
+</html>

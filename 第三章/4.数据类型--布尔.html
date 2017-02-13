@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h3>六种数据类型：undefined、null、string、number、boolen、object</h3>
+		<h4>typeof 是一个操作符而不是一个函数</h1>
+		<script type="text/javascript">
+//		六种数据类型：undefined、null、string、number、boolen、object
+			var a;
+			var b='';
+			var c="string";
+			var d=100;
+			var e=true;
+			var k=null;
+			var f={pro:"属性"};
+			
+			//
+			function g(){
+				var mess="hello,functon";
+			}
+			
+			var arr=[1,2,3];
+			var obj={a:1,b:2};
+			
+			console.log(a+":"+typeof a) //undefined
+			console.log(b+":"+typeof b) //string
+			console.log(c+":"+typeof c) //string
+			console.log(d+":"+typeof d) //number
+			console.log(e+":"+typeof e) //boolen
+			console.log(f+":"+typeof f) //object
+			console.log(g+":"+typeof g) //function
+			console.log(k+":"+typeof k) //object
+			console.log(arr+":"+typeof arr) //object
+			console.log('-------js判断一个对象类型的数据的具体的数据类型----------');
+			console.log(arr);  //[1,2,3]
+			console.log('判断上面的变量类型是否为数组')
+			console.log(Object.prototype.toString.call(arr) ==='[object Array]'); //true
+			console.log('-----------------');
+			console.log(obj); //{a:1,b:2}
+			console.log('判断上面的变量类型是否是Object');
+			console.log(Object.prototype.toString.call(obj)==='[object Object]'); //true
+			
+			console.log('----------null-------');
+			console.log(null);
+			console.log(typeof null);   //object
+			console.log('判断上面的变量类型是否是null');
+			console.log(Object.prototype.toString.call(null)==='[object Null]');
+			
+			console.log('-----null==undefined????------------');
+			console.log(null==undefined);  //true
+			console.log(typeof undefined);//undefined
+			
+			
+			
+			console.log('---------转换为布尔值--------');
+			console.log(Boolean(undefined));  //false
+			console.log(Boolean(null)); //false
+			console.log(Boolean(0)); //false
+			console.log(Boolean(NaN));  //false
+			console.log(Boolean('')); //false
+			console.log(Boolean({})); //true
+			console.log(false); //false
+			
+			
+			console.log('-------为啥Boolean({})为true？--------')
+			console.log(typeof '');   //string
+			console.log(typeof []);    //object
+			console.log(typeof {});		//object
+			console.log(typeof function(){});    //function
+			
+			console.log(Boolean(''));   //false
+			console.log(Boolean([]));  //true
+			console.log(Boolean(function (){})) //true
+			console.log(Boolean(new String('')));  //true
+			
+			
+			
+			console.log(null=={})  //false
+			console.log('---------------')
+			var name='string';
+			console.log(name);//string
+			console.log(typeof name=='string');//true
+			console.log((typeof name)=='string');   //true
+		</script>
+	</body>
+</html>
