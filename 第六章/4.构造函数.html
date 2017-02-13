@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			function Person(name,age){
+				this.name=name;
+				this.age=age;
+				this.sayName=function(){console.log(this.name);};  //
+				this.sayAge=function(){console.log(this.age);};
+			}
+			/*将对象的方法写在构造函数内，造成方法不能共享，浪费内存*/
+			/*但是在原型上添加的方法，却又不能在window上调用*/
+//			Person.prototype.sayName=function(){console.log(this.name);};   //原型上定义的方法不能在window上调用
+//			Person.prototype.sayAge=function(){console.log(this.age);};
+			//当作构造函数使用
+			var p1=new Person('tom',22);
+			p1.sayName(); //tom
+			p1.sayAge(); //22
+			
+			//当作普通函数来使用时
+			Person('tim',20); //将该对象实例添加到window
+			window.sayName(); //tim
+			
+			//在另一个对象的作用域中调用（A对象调用B对象的方法和属性）
+			var o=new Object();
+			Person.call(o,'linda',25);   //o对象调用Person对象的方法和属性
+			o.sayName(); //linda
+			o.sayAge(); //25
+			console.log(Person.prototype.constructor);   //Person
+			
+		</script>
+	</body>
+</html>
