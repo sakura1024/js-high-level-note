@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<h4>3.采用Apply方法改变函数上下文实现继承(该种方式不能继承原型链,若想继承原型链，则采用5混合模式)</h4>
+		<h4>	实现原理:改变函数内部的函数上下文this,使它指向传入函数的具体对象</h4>
+		<script type="text/javascript">
+//			function Parent(firstname) {
+//				this.fname = firstname;
+//				this.age = 40;
+//				this.sayAge = function() {
+//					console.log(this.age);
+//				}
+//			}
+//
+//			function Child(firstname) {
+//
+//				this.saySomeThing = function() {
+//					console.log(this.fname);
+//					this.sayAge();
+//				}
+//				this.getName = function() {
+//					return firstname;
+//				}
+//
+//			}
+//			var child = new Child("张");
+//			Parent.apply(child, [child.getName()]);
+//			child.saySomeThing();
+			function Parent(fname){
+				this.fname=fname;
+				this.age=40;
+				this.sayAge=function(){
+					console.log(this.age);
+				}
+			}
+			function Child(name){
+				this.getName=function(){
+					return name;     //注意：这是name
+				}
+				this.saySome=function(){
+					console.log(this.fname);   //注意：这是fname
+					this.sayAge();
+					
+				}
+			}
+			var mchild=new Child('张');
+			Parent.apply(mchild,[mchild.getName()]);   // 注意：第2个参数是数组
+			mchild.saySome();
+		</script>
+	</body>
+
+</html>

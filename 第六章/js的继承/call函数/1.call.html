@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<h4>先看看关于call()的官方解释，“调用一个对象的一个方法，以另一个对象替换当前对象。”，看了这样的解释，或许让你更摸不着头脑了。看例子：</h4>
+		<script type="text/javascript">
+			var x = "我是全局变量";　　　　 //定义全局变量x
+			function a() {　　　　　　　　　 //定义函数类结构a　　
+				this.x = "我是在函数类结构a中声明的哦";
+			}
+			//定义普通函数，弹出当前指针所包含的变量x的值
+			function f() {
+				alert(this.x);
+			}
+			f.call(new a());//返回值为“我是在函数类结构a中声明的哦”    
+			//a继承了f函数,并且f函数放在了a函数的末尾
+		</script>
+	</body>
+
+</html>

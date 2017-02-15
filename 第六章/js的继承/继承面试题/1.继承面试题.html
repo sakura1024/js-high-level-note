@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+	</head>
+
+	<body>
+		<input type="button" id="xiaoXianBtn" value="小贤的正常叫声" />
+		<input type="button" id="xiaoMangBtn" value="小芒的疯叫声" />
+		<script type="text/javascript">
+			if(typeof Object.beget !== 'function') {
+				Object.beget = function(o) {
+					var F = function() {};
+					F.prototype = o;
+					return new F();
+				};
+			}
+			window.onload = function() {
+				var Dog = {
+					wow: function() {
+						alert('wow');
+					},
+					yelp: function() {
+						return this.wow();
+					}
+				};
+
+				var MadDog = Object.beget(Dog);
+				MadDog = {
+					madYelp: function() {
+						var _self = this;
+						setInterval(function() {
+							return _self.wow();
+						}, 2000);
+					}
+				};
+
+				//test xiaoXian
+				var xiaoXian = Object.beget(Dog);
+				var xiaoXianBtn = document.getElementById('xiaoXianBtn');
+				xiaoXianBtn.onclick = function() {
+					xiaoXian.yelp();
+				};
+				//test xiaoMang
+				var xiaoMang = Object.beget(MadDog);
+				var xiaoMangBtn = document.getElementById('xiaoMangBtn');
+				xiaoMangBtn.onclick = function() {
+					xiaoMang.madYelp();
+				};
+
+			};
+		</script>
+	</body>
+
+</html>

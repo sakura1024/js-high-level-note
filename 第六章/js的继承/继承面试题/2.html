@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			function Person(name,age) {
+				this.name = name;
+				this.age = age;
+			}
+			
+			Person.prototype={
+				showName:function(){console.log(this.name)},
+				showAge:function(){console.log(this.age)}
+			}
+
+			function Worker(name,age,job) {
+				Person.apply(this, arguments)  //arguments:["sl", "coders"]   apply  不会复制Person原型上的属性到Worker中
+				this.job = job;
+			}
+			Worker.prototype = Person.prototype;
+			new Worker('sl',30,'coders').showName();  //sl
+			new Worker('sl',30,'coders').showAge();    //30
+			
+			
+		</script>
+	</body>
+
+</html>

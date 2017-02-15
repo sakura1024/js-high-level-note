@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<h4>5.采用混合模式实现继承</h4>
+		<script type="text/javascript">
+			function Parent() {
+
+				this.sayAge = function() {
+					console.log(this.age);
+				}
+			}
+
+			Parent.prototype.sayParent = function() {
+				console.log("this is parentmethod!!!");
+			}
+
+			function Child(firstname) {
+				Parent.call(this);   //call,apply均不能复制（继承）原型
+				this.fname = firstname;
+				this.age = 40;
+				this.saySomeThing = function() {
+					console.log(this.fname); 
+					this.sayAge();          //通过call改变this指针，调用Parent的方法
+				}
+			}
+
+			Child.prototype = new Parent();   //可以将parent的原型复制过来
+			var child = new Child("张");
+			child.saySomeThing();  //张 40
+			child.sayParent();       //this is parentmethod
+			//当注释掉33行时，36行报错，找不到sayParent函数  child.sayParent is not a function
+		</script>
+	</body>
+
+</html>

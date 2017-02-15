@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			function f() {
+				this.a = "a";
+				this.b = function() {
+					alert("b");
+				}
+			}
+
+			function e() {
+				f.call(this);    //this继承了f，也就是e继承了f
+			}
+			var c = new e();
+			alert(c.a); //弹出a
+			c.b(); //弹出b
+		</script>
+	</body>
+
+</html>

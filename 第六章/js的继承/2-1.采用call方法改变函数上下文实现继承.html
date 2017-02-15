@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>2-1是2的原理</title>
+	</head>
+
+	<body>
+		<h4>2.采用call方法改变函数上下文实现继承(该种方式不能继承原型链,若想继承原型链，则采用5混合模式)
+			实现原理:改变函数内部的函数上下文this,使它指向传入函数的具体对象</h4>
+		<h5>A.call(B,arg2,arg3);将A复制到B中(B函数的末尾位置)，B可以使用A的方法和属性，arg2，arg3都是传递给A函数的</h5>
+		<script type="text/javascript">
+			/*2.采用call方法改变函数上下文实现继承(该种方式不能继承原型链,若想继承原型链，则采用5混合模式)
+			实现原理:改变函数内部的函数上下文this,使它指向传入函数的具体对象*/
+			function Parent(firstname) {
+//				this.fname = firstname;
+//				this.age = 40;
+//				this.sayAge = function() {
+//					console.log(this.age);
+//				}
+			}
+
+			function Child(firstname) {
+
+				this.saySomeThing = function() {
+					console.log(this.fname);   //张      可以看出虽然this.fname的定义在该行的下面，但是不影响使用
+					this.sayAge();   40
+				}
+//				this.getName = function() {
+//					return firstname;   //张
+//				}
+				this.fname = firstname;
+				this.age = 40;
+				this.sayAge = function() {
+					console.log(this.age);
+				}
+
+			}
+			var child = new Child("张");
+//			Parent.call(child, child.getName());  //其实就是把Parent函数内容复制到Child函数中解析，参数2传递给Parent函数
+			child.saySomeThing();
+		</script>
+	</body>
+
+</html>

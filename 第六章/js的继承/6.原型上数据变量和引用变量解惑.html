@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<a href="http://www.cnblogs.com/humin/p/4556820.html">JS继承的实现方式</a>
+		<script type="text/javascript">
+			function DOG(name) {　　　　
+				this.name = name;　　
+			}　　
+			DOG.prototype = {
+				species: '犬科',
+				arr:[1,2,3]
+			};
+
+			var dogA = new DOG('大毛');　　
+			var dogB = new DOG('二毛');
+			
+			console.log(dogA.species); // 犬科
+			console.log(dogB.species); // 犬科
+			dogA.species='猫科';  
+			dogA.arr.push(4);
+			console.log(dogA.species); // 猫科
+			console.log(dogB.species); // 犬科
+			
+			console.log(dogA.arr);   //[1,2,3,4]
+			console.log(dogB.arr);   //[1,2,3,4]
+			
+			//结论：
+			//原型上数据变量在某个实例上修改后，不会影响其他实例该数据变量的值
+			//原型上引用变量在某个实例上修改后，其他实例该数据变量的值也会相应的改变
+			//该例子中species为数据变量，arr为引用变量，所以species不受影响，arr受影响
+		</script>
+	</body>
+
+</html>

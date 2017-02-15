@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<a href="http://javapolo.iteye.com/blog/1996871">js继承的5种方式</a>
+		<a href="http://www.cnblogs.com/humin/p/4556820.html">JS继承的实现方式的各自优缺点，但是尚未完全掌握</a>
+		<h4>js继承的5种方式</h4>
+		<script type="text/javascript">
+			/*1.使用对象冒充实现继承(该种实现方式可以实现多继承)
+			实现原理:让父类的构造函数成为子类的方法,然后调用该子类的方法,通过this关键字给所有的属性和方法赋值*/
+			function Parent(firstname) {
+				this.fname = firstname;
+				this.age = 40;
+				this.sayAge = function() {
+					console.log(this.age);  //40
+				}
+			}
+
+			function Child(firstname) {
+				this.parent = Parent;
+				this.parent(firstname);      //调用构造函数Parent  mychild.fname='李';mychild.age=40;
+				delete this.parent;
+				this.saySomeThing = function() {
+					console.log(this.fname);   //李
+					this.sayAge();
+				}
+			}
+			var mychild = new Child("李");
+			mychild.saySomeThing();
+			
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<h4>4.采用原型链的方式实现继承</h4>
+		<h4>实现原理:使子类原型对象指向父类的实例以实现继承,即重写类的原型,弊端是不能直接实现多继承</h4>
+		<script type="text/javascript">
+//			function Parent() {
+//
+//				this.sayAge = function() {
+//					console.log(this.age);
+//				}
+//			}
+//
+//			function Child(firstname) {
+//				this.fname = firstname;
+//				this.age = 40;
+//				this.saySomeThing = function() {
+//					console.log(this.fname);
+//					this.sayAge();
+//				}
+//			}
+//
+//			Child.prototype = new Parent();
+//			var child = new Child("张");
+//			child.saySomeThing();
+			function Parent(){
+				this.sayAge=function(){
+					console.log(this.age);
+				}
+			}
+			function Child(name){
+				this.name=name;
+				this.age=40;
+				this.saySome=function(){
+					console.log(this.name);
+					this.sayAge();
+				}
+			}
+			Child.prototype=new Parent();
+			var mchild=new Child('张');
+			//mchild.sayAge(); //40
+			mchild.saySome();
+		</script>
+	</body>
+
+</html>
