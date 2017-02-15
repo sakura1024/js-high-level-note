@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>indexOf(str,startIndex)---参数1:要查找的字符，参数2:从何处开始查找（可选），从前向后找，返回第一个找到字符所在的下标,未找到时返回-1</li>
+			<li>lastIndexOf(str,startIndex)--参数1:要查找的字符，参数2:从何处开始查找（可选），从后向前找，返回第一个找到字符所在的下标,未找到时返回-1</li>
+		</ul>
+		<ul>
+			<li>找出字符串中指定字符的所有索引位置</li>
+			<li>法1：str.indexOf</li>
+			<li>法2:for循环</li>
+		</ul>
+		<script type="text/javascript">
+			var str='hello world';
+			console.log(str.indexOf('l'));  //2
+			console.log(str.lastIndexOf('l'));  //9
+			console.log(str.indexOf('l',4));  //9
+			console.log(str.lastIndexOf('l',8));  //3
+			console.log(str.indexOf('a'));   //-1
+			
+			//找出字符串中某个字符的所有索引位置
+			//法1：str.indexOf
+			var aPos=[];
+			var pos=str.indexOf('l');
+			while(pos>-1){
+				aPos.push(pos);
+				pos=str.indexOf('l',pos+1);
+			}
+			console.log(aPos);
+			//法2:for循环
+			/*var aPos=[];
+			for (var i=0;i<str.length;i++) {
+				if(str[i]==='l'){
+					aPos.push(i);
+				}
+			}
+			console.log(aPos);*/
+		</script>
+	</body>
+</html>

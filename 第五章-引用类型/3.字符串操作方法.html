@@ -7,8 +7,10 @@
 	<body>
 		<h4>concat、slice、substring、substr都不会改变原有字符串</h4>
 		<ul>
+			<li>concat(str)---连接两个字符串为一个新的字符串</li>
 			<li>slice(arg1,arg2),substring(arg1,arg2)---参数1都是截取字符串的起始位置，参数2都是截取字符串的结束位置（不包括结束位置）</li>
 			<li>substr(arg1,arg2)---参数1都是截取字符串的起始位置，参数2是截取字符串的长度</li>
+			<li>slice、substring、substr当三个函数的参数为负值时，表现各不相同（见js高级程序设计P143）</li>
 		</ul>
 		<script type="text/javascript">
 			var str1='hello ';
@@ -22,6 +24,9 @@
 			console.log(str3.slice(3));  //lo world
 			console.log(str3.substring(3));//lo world
 			console.log(str3.substr(3));//lo world
+			
+			var str='hello world';
+			console.log(str.substring(3,-4))  //hel
 		</script>
 	</body>
 </html>
