@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h4>charAt(index)--返回字符串中索引为index的字符</h4>
+		<h4>charCodeAt(index)--返回字符串中索引为index的字符的ASCII码</h4>
+		<ul>
+			<li>0-----48</li>
+			<li>A-----65</li>
+			<li>a-----97</li>
+		</ul>
+		<script type="text/javascript">
+			
+			var str='hello';
+			//返回指定索引位置的字符--法1
+			console.log(str.charAt(1));  //e
+			console.log(str.charCodeAt(1)); //e的ASCII码:101
+			//返回指定索引位置的字符--法2
+			console.log(str[1]); //e
+		</script>
+	</body>
+</html>
