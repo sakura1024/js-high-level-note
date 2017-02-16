@@ -1,18 +1,16 @@
-###Welcome to use MarkDown
-> 字符方法（根据索引值查找字符串中指定位置的字符）
-1. charAt(index)--返回字符串中索引为index的字符
-1. charCodeAt(index)--返回字符串中索引为index的字符的ASCII码
-1. str[index]--返回字符串中索引为index的字符           
-#### 字符串中的操作方法：      
-> 以下方法不会改变原有字符串，而是会返回新的字符串           
-1. slice(arg1,arg2),substring(arg1,arg2)---参数1都是截取字符串的起始位置，参数2都是截取字符串的结束位置（不包括结束位置）
-2. substr(arg1,arg2)---参数1都是截取字符串的起始位置，参数2是截取字符串的长度
-3. concat(str)---连接两个字符串为一个新的字符串
-4. trim()---删除串中前置及后缀的所有空格，返回去除空格后的新串
-5. toLowerCase()／toUpperCase----字符串大小写转换方法
+<!DOCTYPE html>
+<html>
 
-字符串的match方法
-<ul>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{line-height: 30px;}
+		</style>
+	</head>
+
+	<body>
+		<ul>
 			<li>语法：stringObject.match( regExp )</li>
 			<li>作用：match()函数用于使用指定的正则表达式模式在当前字符串中进行匹配查找，并返回数组形式的查找结果。</li>
 			<li>
@@ -33,3 +31,25 @@
 				<p>3.match()函数如果没有查找到任何匹配，则返回null。</p>
 			</li>
 		</ul>
+		<script type="text/javascript">
+			var str = "Code123Player34Code456 http://www.365mini.com";
+			var result = str.match(/\d{2}/); //// 不带g的正则表达式(查找第一个2位数字)
+			console.log(result); //["12", index: 4, input: "Code123Player34Code456 http://www.365mini.com"]
+			var result1 = str.match(/\d{2}/g);
+			console.log(result1); //["12", "34", "45", "36"]   
+
+			var result2 = str.match(/Code/);
+			console.log(result2); //["Code", index: 0, input: "Code123Player34Code456 http://www.365mini.com"]
+
+			var result3 = str.match('Code');
+			console.log(result3); //["Code", index: 0, input: "Code123Player34Code456 http://www.365mini.com"]
+
+			var result4 = str.match(/Code/g);
+			console.log(result4); //["Code", "Code"]
+
+			var result5 = str.match(/jame/);
+			console.log(result5); //null
+		</script>
+	</body>
+
+</html>
