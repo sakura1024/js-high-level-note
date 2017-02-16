@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			
+			<li>replace不会改变原有字符串</li>
+			<li>语法：str.replace(arg1,arg2)---将arg1替换为arg2</li>
+			<li>参数1为字符串时，只替换str中满足条件的第一个子串；
+				当参数1为正则表达式时，且带有g标志时，替换str中所有满足条件的子串</li>
+			<li>参数2为字符串时，可以使用特殊的字符序列</li>
+		</ul>
+		<script type="text/javascript">
+			var str='cat,bat,sat,fat';
+			var result=str.replace('at','ond');
+			console.log(str);
+			console.log(result);
+			var result1=str.replace(/at/g,'ond');
+			console.log(result1);
+			var result2=str.replace(/(.at)/g,'ond($1)');   //注意参数1和参数2都有改变，参数1加了（.）
+			console.log(result2);  //ond(cat),ond(bat),ond(sat),ond(fat)
+		</script>
+	</body>
+</html>
