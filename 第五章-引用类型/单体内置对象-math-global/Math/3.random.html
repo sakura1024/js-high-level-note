@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//公式:Math.random()*(大-小+1)+小  随机显示小-大之间的数  
+			var num=Math.floor(Math.random()*10+1);   //1-10
+			console.log(num);  //1-10
+			
+			
+			//用例
+			//利用上述随机数,可以随机的取出一个数组中的某一项
+			 function selectFrom(min,max){
+			 	var choice=max-min+1;
+			 	return Math.floor(Math.random()*choice+min);
+			 }
+			 var arr=['red','yellow','blue','white','pink','blcak'];
+			 var index=selectFrom(0,arr.length-1);
+			 var result=arr[index];
+			 console.log(arr);
+			 console.log(index);
+			 console.log(result);
+			
+		</script>
+	</body>
+</html>
