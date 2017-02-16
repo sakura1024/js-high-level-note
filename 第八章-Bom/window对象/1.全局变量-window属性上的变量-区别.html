@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>全局变量和window属性上定义的变量的区别：</li>
+			<li>全局变量不能通过delete删除，而window属性上定义的变量可以通过delete删除</li>
+		</ul>
+		<script type="text/javascript">
+			var num=23;
+			window.str='string';
+			delete num;
+			delete str;
+			console.log(num);  //23
+			console.log(str);  //str is not defined
+		</script>
+	</body>
+</html>
