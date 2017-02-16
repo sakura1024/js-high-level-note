@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>语法：str.search(regExp／字符串)</li>
+			<li>作用：返回字符串中第一个匹配项的索引，如果没有找到匹配项，返回-1</li>
+			<li>注意：始终返回的是“第一个”匹配项的“索引”</li>
+			<li>与match的区别：match参数中带g时，返回的是所有满足条件的匹配项（不是索引哦）组成的数组；参数中不带g的时候，返回的是第一个满足条件的匹配项，及其索引index和查找的字符串对象input
+			</li>
+		</ul>
+		<script type="text/javascript">
+			var str='Code123Player34Code456 http://www.365mini.com';
+			var result=str.search('Code');
+			console.log(result); //0
+		</script>
+	</body>
+</html>
