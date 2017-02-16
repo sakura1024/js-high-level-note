@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>在没有给函数明确指明this值的情况下，this的值都等于window</li>
+		</ul>
+		<script type="text/javascript">
+			var global=function(){
+		 		console.log(this);   //window
+		 	}();
+		 	var color="red";
+		 	console.log(window.color);  //red
+		</script>
+	</body>
+</html>

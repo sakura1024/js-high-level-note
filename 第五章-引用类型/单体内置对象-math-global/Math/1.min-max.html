@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var max=Math.max(2,4,8,6,4,8,43,65);
+			var min=Math.min(2,4,8,6,4,8,43,65);
+			console.log(max);  //65
+			console.log(min);  //2
+			
+			//A.apply(B,arr);   A复制到B中,B可以直接使用A里面的属性或者方法,arr是传给A的参数---这提到的是apply函数类似继承的特性
+			//但是，下面用到的是apply的另一个特性，可以将一个数组默认的转换为一个参数列表([param1,param2,param3] 转换为 param1,param2,param3) 
+			var arr=[2,4,8,6,4,8,43,69];
+			var max=Math.max.apply(Math,arr);   //arr是传给A的参数，此时就是将arr中的每一项转为了参数列表，传给了Math.max(),并且apply函数中的第一个参数可以为任意值，甚至null都可以
+			console.log(max);  //69
+			
+			//解释:当执行Math.max.apply()这个方法的时候，首先apply会将arr这个数组中的数转换成一个参数接一个参数的形式，
+			//相当于执行了Math.max(2,4,8,6,4,8,43,65),然后就得到了最大的值赋值给max
+		
+			/*扩展
+			 
+			 * 根据字符编码，返回对应的字符串
+			 *	var str=String.fromCharCode(104,101,108,108,111);
+			 	console.log(str); //hello
+			 	
+			 	//与下面代码功能相同
+			 	var arr=[104,101,108,108,111];
+			 	var str1=String.fromCharCode.apply(null,arr);
+			 	console.log(str1);   //hello 
+			 * */
+		
+		</script>
+	</body>
+</html>

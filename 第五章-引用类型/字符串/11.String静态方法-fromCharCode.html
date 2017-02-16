@@ -13,6 +13,11 @@
 		 <script type="text/javascript">
 		 	var str=String.fromCharCode(104,101,108,108,111);
 		 	console.log(str); //hello
+		 	
+//		 	与下面代码功能相同
+		 	var arr=[104,101,108,108,111];
+		 	var str1=String.fromCharCode.apply(null,arr);
+		 	console.log(str1);   //hello
 		 </script>
 	</body>
 </html>
