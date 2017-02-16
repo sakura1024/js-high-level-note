@@ -6,16 +6,34 @@
 	</head>
 	<body>
 		<ul>
+			<p>知识点1</p>
 			<li>全局变量和window属性上定义的变量的区别：</li>
 			<li>全局变量不能通过delete删除，而window属性上定义的变量可以通过delete删除</li>
 		</ul>
+		<ul>
+			<p>知识点2</p>
+			<li>尝试访问未声明的变量会报错，..is not defined</li>
+			<li>但是通过查询window查询，可以知道某个可能未声明的变量是否存在，不会报错，只会显示undefined</li>
+		</ul>
 		<script type="text/javascript">
+			//知识点1
 			var num=23;
 			window.str='string';
 			delete num;
 			delete str;
 			console.log(num);  //23
+			
 			console.log(str);  //str is not defined
+			//解释：全局变量不能通过delete删除，是因为通过var语句添加的window属性有一个名为[Configurable]的特性，
+			//这个特性的值默认为false，所以这样定义的属性不可以通过delete操作符删除
+			
+			
+			
+			//知识点2
+			var newValue=oldValue; // 报错： oldValue is not defined
+			var newValue=window.oldValue;   //不会报错
+			console.log(newValue);  //undefined
+			
 		</script>
 	</body>
 </html>
