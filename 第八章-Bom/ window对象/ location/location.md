@@ -2,9 +2,9 @@
 - [x] 改变浏览器位置（下面三行代码作用一样） 
 
   
-window.location.assign('https://www.baidu.com/');
-window.location="https://www.baidu.com/";
-location.href="https://www.baidu.com/"                           
+window.location.assign('https://www.baidu.com/');            
+window.location="https://www.baidu.com               
+location.href="https://www.baidu.com/"                                             
           
 - [x] 加载新页面，但是没有回退按钮             
 
