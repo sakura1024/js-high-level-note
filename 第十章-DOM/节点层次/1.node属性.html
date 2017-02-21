@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="p">hello world!</p>
+		<script type="text/javascript">
+		
+		
+			/*总结：
+			 *  nodeType:节点类型
+				nodeName:节点名称
+				nodeValue:节点值---始终为null
+			 * */
+			var oP=document.querySelector('#p');
+			if (oP.nodeType==1) {
+				value=oP.nodeName;   //p
+			}
+			console.log(value);
+			console.log(oP.nodeValue); //null
+		</script>
+	</body>
+</html>
