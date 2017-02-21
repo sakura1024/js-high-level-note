@@ -15,9 +15,16 @@
 		//注意下面的childNodes的结果中都包含了空格节点，并且空格节点会看成是text节点
 		//childNodes数组中元素的值，是对应的元素名称
 			var oParent=document.querySelector('.parent');
-			console.log(oParent.childNodes);   //[text, p.p, text]
+			console.log(oParent.childNodes);   //类数组：[text, p.p, text]
 			var oP=document.querySelector('.p');
-			console.log(oP.childNodes); //[text, a, text, b, text]
+			console.log(oP.childNodes); //类数组：[text, a, text, b, text]
+			//将类数组转换为真正的数组
+			//法1
+			var newArr=Array.prototype.slice.call(oP.childNodes);
+			//法2
+			//var newArr = Array.from(oP.childNodes);   //es6
+			//判断一个对象是否是数组
+			console.log(Object.prototype.toString.call(newArr)==='[object Array]');//true
 		</script>
 	</body>
 </html>
