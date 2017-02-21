@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			//将url路径中搜索的各个字段分别以name、value的形式保存在一个数组中
+
+
+			function getQueryStringArg(locationSearch) {
+				var qs = locationSearch.length > 0 ? locationSearch.substring(1) : "";
+				console.log(qs)
+				var items = qs.length > 0 ? qs.split('&') : [];
+				var arg = {};
+				var item = null,
+					name = null,
+					value = null;
+
+				for(var i = 0; i < items.length; i++) {
+					item = items[i].split('=');
+					name = decodeURIComponent(item[0]); //解码name，因为查询字符串应该是被编码过的
+					value = decodeURIComponent(item[1]);
+					if(name.length) {
+						arg[name] = value;
+					}
+				}
+				console.log(arg);   //得到一个对象
+			}
+			var locationSearch = '?wd=js%E5%AD%97%E7%AC%A6%E4%B8%B2split&rsv_spt=1&rsv_iqid=0x87c9d3330000ad88&issp=1&f=8&rsv_bp=1&rsv_idx=2&ie=utf-8&rqlang=cn&tn=baiduhome_pg&rsv_enter=1&oq=js&inputT=10149&rsv_t=b33b44jiHnUlTDZ44MzaOhNroTZCIrIE7hCdpAiDmLoKINLJ8qJtXrsDa4r9GVnjnxZ5&rsv_sug3=32&rsv_sug1=38&rsv_sug7=100&rsv_pq=a37505320000aaa8&rsv_sug2=0&rsv_sug4=10846';
+			//locationSearch其实是应该有location.search获取到的----结果实例：'?q=js&num=10'
+			getQueryStringArg(locationSearch);
+		</script>
+	</body>
+
+</html>
