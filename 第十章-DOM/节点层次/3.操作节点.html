@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>节点的增、删、插入、替换</title>
+	</head>
+	<body>
+		<p class="p">
+				<a href="https://www.baidu.com/">百度一下，你就知道</a>
+				<b class="taobao">淘宝网</b>
+				<s class="delete">我是用来删除的节点</s>
+				<i class="replace">我是用来替换的旧节点</i>
+		</p>
+	</body>
+	<script type="text/javascript">
+		var oP=document.querySelector('.p');
+		//为了获取oP的真实子节点，不包含空白节点，采用children---oP.children
+		//子节点尾部添加一个新节点
+		var newNode=document.createElement('a');
+		newNode.href='#';
+		newNode.innerHTML="新增链接";
+		oP.appendChild(newNode);   //返回新添加的节点
+		//在淘宝网前面添加一个节点
+		var oB=document.querySelector('.taobao');
+		var newNode1=document.createElement('p');
+		newNode1.innerHTML="淘宝网前面添加的节点";
+		oP.insertBefore(newNode1,oB);       //返回新插入的节点 
+		//删除一个节点
+		var odel=document.querySelector('.delete');
+		oP.removeChild(odel);   //返回删除的节点
+		
+		//替换一个节点
+		var newNode2=document.createElement('p');
+		newNode2.innerHTML="我是用来替换旧节点的新节点"
+		var oReplace=document.querySelector('.replace');
+		oP.replaceChild(newNode2,oReplace);  //返回被替换的旧节点
+		
+		
+	</script>
+</html>
