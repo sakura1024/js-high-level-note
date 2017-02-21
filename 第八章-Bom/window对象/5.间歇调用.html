@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		var num=0;
+		var max=10;
+		function fun(){
+			num++;
+			if(num===max){
+				clearInterval(timer);
+			}
+			console.log(num);
+			
+		}
+		
+		var timer=setInterval(fun,1000);
+			
+		</script>
+	</body>
+</html>

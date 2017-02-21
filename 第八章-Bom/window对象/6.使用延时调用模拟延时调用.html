@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var num=0;
+			var max=10;
+			function fun(){
+				num++;
+				console.log(num);
+				if(num<max){
+					setTimeout(fun,1000);
+				}
+			}
+			setTimeout(fun,1000);
+			//开发时，很少使用间歇调用，一般都是采用延时调用模拟间歇调用
+		</script>
+	</body>
+</html>

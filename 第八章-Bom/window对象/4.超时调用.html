@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		//法1
+		/*
+			var timer=setTimeout(function(){
+				alert('1秒后调用');
+			},1000);
+			var timer1=setTimeout(function(){
+				alert('也是1秒后调用');
+			},1000);
+		*/	
+		//法1  先弹出“1秒后调用”，再弹出“也是1秒后调用”
+		//法2
+			var timer1=setTimeout(function(){
+				alert('也是1秒后调用');
+				alert(this); //[object Window]
+			},1000);
+			var timer4=setTimeout(function(){
+				alert('1秒后调用');
+			},1000);
+			 console.log(timer1); //1   表示超时调用，相当于当前延时器的一个名称或者标志
+			 console.log(timer4);  //2
+		//法2  先弹出“也是1秒后调用”，再弹出“1秒后调用”	
+		
+//			clearTimeout(timer);
+		/*
+		 * setTimeout(arg1,arg2)
+		 * arg2告诉js再过多长时间把当前任务添加到队列中，如果队列是空的，则添加的代码立即会执行；
+		 * 如果队列不是空的，会先把前面的代码执行完毕之后再执行当前添加的任务。
+		 * 
+		 * 取消延时器，使用clearTimeout(timer)函数
+		 * 
+		 * 由于延时器都是再全局作用域中使用的，所以函数中this非严格模式下，指向window对象
+		 
+		 
+		 * */
+		</script>
+	</body>
+</html>
