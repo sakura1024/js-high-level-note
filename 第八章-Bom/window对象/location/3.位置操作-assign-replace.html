@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="点击加载一个新的文档,并且有后退按钮" onclick="newDoc()"/>
+		<input type="button" name="" id="" value="点击加载一个新的文档,但是新页面中没有后退按钮" onclick="noBack()"/>
+		<input type="button" name="" id="" value="点击重新加载当前页面" onclick="newLoad()"/>
+		<script type="text/javascript">
+			function newDoc(){
+				//改变浏览器位置（即浏览器网址）下面三个方法一致
+				//window.location.assign('https://www.baidu.com/');
+				//等价于下面的代码
+				//window.location="https://www.baidu.com/";
+				location.href="https://www.baidu.com/"
+			}
+			function noBack(){
+				location.replace("https://www.taobao.com/");  //没有回退按钮
+			}
+			function newLoad(){
+				location.reload();    //重新加载当前页面，如果页面自上次请求后，没有改变过，则从缓存中重新加载
+			    //location.reload(true);  //强制从服务器重新加载页面
+			}
+			
+			
+		</script>
+	</body>
+</html>
