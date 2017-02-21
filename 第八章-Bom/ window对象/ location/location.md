@@ -3,7 +3,7 @@
 
   
 window.location.assign('https://www.baidu.com/');            
-window.location="https://www.baidu.com               
+window.location="https://www.baidu.com “               
 location.href="https://www.baidu.com/"                                             
           
 - [x] 加载新页面，但是没有回退按钮             
