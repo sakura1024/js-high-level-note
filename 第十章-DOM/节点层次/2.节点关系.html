@@ -25,6 +25,10 @@
 			//var newArr = Array.from(oP.childNodes);   //es6
 			//判断一个对象是否是数组
 			console.log(Object.prototype.toString.call(newArr)==='[object Array]');//true
+			
+			
+			//任何节点都可以通过ownerDocument这个属性，找到该节点所从属的文档节点
+			console.log(oParent.ownerDocument); //#document
 		</script>
 	</body>
 </html>
