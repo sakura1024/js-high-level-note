@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="parent">
+			<p class="p">
+				<a href="https://www.baidu.com/">百度一下，你就知道</a>
+				<b>淘宝网</b>
+			</p>
+		</div>
+		<script type="text/javascript">
+		//注意下面的childNodes的结果中都包含了空格节点，并且空格节点会看成是text节点
+		//childNodes数组中元素的值，是对应的元素名称
+			var oParent=document.querySelector('.parent');
+			console.log(oParent.childNodes);   //[text, p.p, text]
+			var oP=document.querySelector('.p');
+			console.log(oP.childNodes); //[text, a, text, b, text]
+		</script>
+	</body>
+</html>
