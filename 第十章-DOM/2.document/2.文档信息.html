@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title id="title">文档信息</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//获得文档标题
+			var title=document.title;
+			console.log(title);
+			//设置文档标题
+			document.title="document 信息";
+			
+			console.log(document.getElementById('title').innerHTML); //document 信息
+			
+			/*
+			 * 下面三个属性都与网页的请求有关系
+			 *  document.URL---获取页面完整的url              
+				document.domain---当前页面的域名（可以设置的）              
+				document.referrer---保存着链接到当前页面的那个页面的url
+			 
+			 * */
+			var url1=document.URL;
+			var domain=document.domain;
+			var referrer=document.referrer;
+			console.log(url1); //http://127.0.0.1:8020/%E7%AC%AC%E5%8D%81%E7%AB%A0-DOM/2.document/2.%E6%96%87%E6%A1%A3%E4%BF%A1%E6%81%AF.html
+			console.log(domain); //127.0.0.1
+			console.log(referrer); //''
+		</script>
+	</body>
+</html>

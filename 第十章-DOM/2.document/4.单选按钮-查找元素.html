@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			.col{color: yellow;}
+			.li{color: red;}
+			#first{
+					color: pink;
+				}
+			
+		</style>
+	</head>
+	<body>
+		<ul>
+			<!--查漏补缺：
+				1.优先级相同的情况下，li的字色和html中类名的先后顺序无关，只和style中类名的先后顺序有关，
+				2.优先级不同的情况下，优先级高的样式是其最终样式-->
+			<!--注意：
+				1.label中for对应的是input中的id，这样点击label的时候也就可以控制单选按钮是否选中了
+				2.此外，为了实现，单选的效果，所有单选按钮的name相同
+			-->
+			<li id="first" class="li col " >
+				<input type="radio" name="color" id="colorRed" value="red" />
+				<label for="colorRed">red</label>
+			</li>
+			<li>
+				<input type="radio" name="color" id="colorYellow" value="yellow" />
+				<label for="colorYellow">yellow</label>
+			</li>
+			<li>
+				<input type="radio" name="color" id="colorBlue" value="blue" />
+				<label for="colorBlue">blue</label>
+			</li>
+			<li>
+				<input type="radio" name="color" id="colorPink" value="pink" />
+				<label for="colorPink">pink</label>
+			</li>
+		</ul>
+		<script type="text/javascript">
+			var oInput=document.getElementsByName('color');
+			console.log(oInput);//[input#colorRed, input#colorYellow, input#colorBlue, input#colorPink]
+		</script>
+	</body>
+</html>
