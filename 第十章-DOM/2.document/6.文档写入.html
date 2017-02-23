@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p>我是原有内容</p>
+		<script type="text/javascript">
+		//文档加载过程中，通过write()写入内容，不会重写整个页面
+		/*
+			document.writeln("hello");
+			document.write("world");
+			结果：
+			我是原有内容
+			hello world
+		*/
+		//如果文档加载完之后，再通过write()写入内容，就会重写整个页面
+		window.onload=function(){
+			document.writeln("hello");
+			document.write("world");
+//			结果：
+//			hello world
+		}
+		</script>
+	</body>
+</html>
