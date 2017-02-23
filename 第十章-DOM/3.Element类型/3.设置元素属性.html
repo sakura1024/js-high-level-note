@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div" src="img/i.jpg">hello world</div>
+		<script type="text/javascript">
+			//设置元素属性
+			var oDiv=document.getElementById('div');
+			//法1
+			oDiv.id="div1";
+			oDiv.title="title";
+			
+			//法2
+			oDiv.setAttribute('src','img/2.jpg');
+			oDiv.setAttribute('class','class');
+			oDiv.setAttribute('mycolor','red');
+			console.log(oDiv.mycolor);  //undefined
+			console.log(oDiv.getAttribute('mycolor'));  //red
+		</script>
+	</body>
+</html>

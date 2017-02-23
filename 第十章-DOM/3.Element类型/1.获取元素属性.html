@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="id1" title="title" class="class1" data-src="img/i.jpg">
+			hello world!
+		</div>
+		<script type="text/javascript">
+			var oDiv=document.getElementById('id1');
+			//获取一个元素属性的两种方式
+			//法1（该种方法既可以获取属性，也可以设置属性）
+			console.log(oDiv.id);
+			console.log(oDiv.title);
+			console.log(oDiv.className);
+			//console.log(oDiv.data-src);报错
+			
+			//法2
+			console.log(oDiv.getAttribute('id'));
+			console.log(oDiv.getAttribute('title'));
+			console.log(oDiv.getAttribute('class'));
+			console.log(oDiv.getAttribute('data-src'));
+			
+		</script>
+	</body>
+</html>

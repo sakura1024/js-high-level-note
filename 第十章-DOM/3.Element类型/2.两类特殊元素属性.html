@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="buttom" name="btn" id="btn" value="点击" onclick="fun()" style="color: red;"/>
+		<script type="text/javascript">
+			var oBtn=document.querySelector('#btn'); 
+			// 通过元素特性获取属性的值-----(获取的是属性值的对象)
+			console.log(oBtn.style); //css对象
+			console.log(oBtn.onclick); //函数对象
+			
+			//通过getAttribute('')获取元素属性的值----（获取的是属性的值以字符串的形式原样输出）
+			console.log(oBtn.getAttribute('style'));  //color: red;
+			console.log(oBtn.getAttribute('onclick')); //fun()
+		</script>
+	</body>
+</html>

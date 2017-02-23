@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div" src="img/i.jpg">hello world</div>
+		<script type="text/javascript">
+			var oDiv=document.getElementById('div');
+			oDiv.removeAttribute('id');
+			console.log(oDiv.getAttribute('id')); //null
+			
+		</script>
+	</body>
+</html>
