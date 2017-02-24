@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li class="li">元素1</li>
+			<li class="li">元素2</li>
+			<li class="li">元素3</li>
+			<li class="li">元素4</li>
+		</ul>
+		<ul class="ul">
+			<li class="li">元素1</li>
+			<li class="li">元素2</li>
+			<li class="li">元素3</li>
+			<li class="li">元素4</li>
+			<li class="li">元素5</li>
+		</ul>
+		<script type="text/javascript">
+		
+		
+			//操作的对象是document
+			var oLI=document.querySelector('.li');//注意：不是数组，是一个对象--返回的是第一个li
+			console.log(oLI.innerText); //元素1
+			
+			var aLi=document.querySelectorAll('.li');
+			console.log(aLi.length); //9
+			
+			var oul=document.querySelector('.ul');
+			//操作的对象是Element元素对象
+			var aLIs=oul.querySelectorAll('li').length;
+			console.log(aLIs);   //5
+			
+			//验证操作对象oul是否符合后面参数中给定的选择符，符合返回true，反之返回false
+			console.log(oul.webkitMatchesSelector('ul'));   //true
+		</script>
+	</body>
+</html>
