@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--hello-->
+		<ul id="ul">
+			<li>元素1</li>
+			<li>元素2</li>
+			<li>元素3</li>
+		</ul>
+		<script type="text/javascript">
+			var oUl=document.getElementById('ul');
+			console.log(oUl.getElementsByTagName('li'));   //[li, li, li]
+			//查找所有子元素时，不推荐使用
+			console.log(oUl.childNodes); //[text, li, text, li, text, li, text]--包含空白符，
+			//一般使用这种方式查找所有子元素
+			console.log(oUl.children);  //[li, li, li]
+			
+			
+			//访问children的内容要用innerHTML/innerText属性
+			console.log(oUl.children[0].nodeValue);  //null
+			console.log(oUl.children[0].innerText);  //元素1
+			console.log(oUl.children[0].innerHTML);  //元素1
+			console.log(oUl.children[0].data);  //undefined
+			console.log(oUl.childNodes[1].nodeValue);  //null
+			console.log(oUl.childNodes[1].innerHTML);  //元素1
+			console.log(document.body.children); //length:2---[ul,script]
+			console.log(document.body.childNodes); //length:6---[text,comment,text,ul,text,script]
+			
+			
+			//获取注释里面的内容--data/nodeValue
+			console.log(document.body.childNodes[1].data); //hello
+			console.log(document.body.childNodes[1].nodeValue);//hello
+
+			
+			
+		</script>
+	</body>
+</html>
