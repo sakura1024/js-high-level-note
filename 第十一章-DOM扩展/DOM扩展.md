@@ -67,23 +67,23 @@ ex:<div class="bd user disabled div containClass removeClass toggle1Class">
 	console.log(document.charset); //UTF-8  
 
 ### 自定义数据属性 data-
-> 法1
+> 法1     
 		//获取自定义属性值
 		console.log(oDiv.getAttribute('data-src'));  //src
 		//设置自定义属性值
 		oDiv.setAttribute('data-src','src1')
 		console.log(oDiv.getAttribute('data-src'));  //src1
 
->法2
+>法2    
 		//获取自定义属性值(dataset时，直接使用“name”，不要使用“data-name”)
 		console.log(oDiv.dataset.name);  //name
 		//设置自定义属性值
 		console.log(oDiv.dataset.name="name1");  //name1
 
-> 此外,新增自定义属性
+> 此外,新增自定义属性        
 		oDiv.dataset.age=12;
 		console.log(oDiv.dataset.age); //12	
-> 删除，设置成null，或者delete
+> 删除，设置成null，或者delete       
 		oDiv.dataset.name=null;
 		delete oDiv.dataset.src; 	      
 		      
