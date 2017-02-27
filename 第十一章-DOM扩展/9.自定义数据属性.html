@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div" data-src="src" data-name="name">
+			我的标签里里有自定义属性
+		</div>
+		<script type="text/javascript">
+			var oDiv=document.getElementById('div');
+			//法1
+			//获取自定义属性值
+			console.log(oDiv.getAttribute('data-src'));  //src
+			//设置自定义属性值
+			oDiv.setAttribute('data-src','src1')
+			console.log(oDiv.getAttribute('data-src'));  //src1
+			
+			//法2
+			//获取自定义属性值
+			console.log(oDiv.dataset.name);  //name
+			//设置自定义属性值
+			console.log(oDiv.dataset.name="name1");  //name1
+			
+			
+			
+			//此外,新增自定义属性
+			oDiv.dataset.age=12;
+			console.log(oDiv.dataset.age); //12
+			
+			//删除，设置成null，或者delete
+			oDiv.dataset.name=null;
+			delete oDiv.dataset.src; 
+		</script>
+	</body>
+</html>
