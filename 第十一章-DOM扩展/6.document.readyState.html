@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h3>document.readyState:返回文档是否加载完毕</h3>
+		<script type="text/javascript">
+			//readyState 属性返回当前文档的状态（载入中……）
+			//返回的可能值有两个：loading--文档加载中；complete--文档加载完毕
+			console.log(document.readyState);//loading
+			window.onload=function(){
+				console.log(document.readyState);//complete
+			}
+		</script>
+	</body>
+</html>

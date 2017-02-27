@@ -53,4 +53,8 @@ ex:<div class="bd user disabled div containClass removeClass toggle1Class">
 > 焦点管理的范围：判断一个页面是否获得了焦点，--获得焦点的元素是哪个元素
 - [x] document.activeElement----引用DOM中获得焦点的元素，返回获得焦点的元素
 - [x] document.hasFocus()---判断某个元素是否获得焦点，返回true或者false
-              
+
+### document.readyState 属性返回当前文档的状态
+	返回的可能值有两个：
+		loading--文档加载中；
+		complete--文档加载完毕。              
