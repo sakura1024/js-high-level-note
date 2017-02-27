@@ -85,5 +85,6 @@ oDiv.dataset.age=12;
 console.log(oDiv.dataset.age); //12	       
 - [x] 删除，设置成null，或者delete                  
 oDiv.dataset.name=null;       
-delete oDiv.dataset.src; 	             
-		      
+delete oDiv.dataset.src; 
+### innerHTML性能问题
+	每设置一次innerHTML，则会创建一次HTML解析器，该解析器是在浏览器级别上

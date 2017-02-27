@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div">
+			
+		</div>
+		<script type="text/javascript">
+			var oDiv=document.getElementById('div');
+			//创建5000个div  /**/
+			//法1：appendChild---//创建5000次HTML解析器
+			console.time('法1appendChild');
+			for (var i=0;i<5000;i++) {
+				var oDiv1=document.createElement('div');
+				oDiv1.innerHTML="div"+(i+1);   
+				oDiv.appendChild(oDiv1);
+			}
+			console.timeEnd('法1appendChild');  //法1appendChild: 55.638ms
+			/* 法2:oDiv.innerHTML+="<div>"+(i+1)+"</div>"; 每循环一次，oDiv.innerHTML先要获取一次，再在此基础上设置一次，每次都要创建两次HTML解析器，耗性能 
+			//法2：innerHTML---创建10000次HTML解析器
+			console.time('法2innerHTML');
+			for (var i=0;i<5000;i++) {
+				oDiv.innerHTML+="<div>"+(i+1)+"</div>";
+			}
+			console.timeEnd('法2innerHTML');  //法2innerHTML: 26071.325ms
+			*/
+			/*
+			//法3：string---创建1次HTML解析器
+			console.time('法3string');
+			var str="";
+			for (var i=0;i<5000;i++) {
+				str+="<div>"+(i+1)+"</div>";
+			}
+			oDiv.innerHTML=str;
+			console.timeEnd('法3string');  //法3string: 25.314ms
+			*/
+			//总结：
+			//将创建的多个标签统一放在以字符串的形式，存放到一个大的字符串str内，然后将str赋值给oDiv.innerHTML,这样就只创建一次HTML解析器，提高性能
+		</script>
+	</body>
+</html>
