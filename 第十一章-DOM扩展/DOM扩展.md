@@ -40,7 +40,7 @@ ex:<div class="bd user disabled div containClass removeClass toggle1Class">
 - [x] remove(class1, class2, ...)---移除元素中一个或多个类名。         
 	oDiv.classList.remove('removeClass');         
 
-- [x] toggle(class, true|false)----	在元素中切换类名。         
+- [x] toggle(class, true|false)----	在元素中切换类名。
 	第一个参数为要在元素中移除的类名，并返回 false。          
 	如果该类名不存在则会在元素中添加类名，并返回 true。          
 	
@@ -57,4 +57,9 @@ ex:<div class="bd user disabled div containClass removeClass toggle1Class">
 ### document.readyState 属性返回当前文档的状态
 	返回的可能值有两个：
 		loading--文档加载中；
-		complete--文档加载完毕。              
+		complete--文档加载完毕。
+### document.head--对文档head的引用----h5新增属性
+	 document.body;  //引用文档的body元素
+	 document.head;  //引用文档的head元素（h5新增属性）
+	 //引用文档head属性的另一种方式
+	 document.getElementsByTagName('head')[0];           
