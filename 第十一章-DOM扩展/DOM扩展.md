@@ -29,11 +29,9 @@ console.log(oul.webkitMatchesSelector('ul'));   //true
 ex:<div class="bd user disabled div containClass removeClass toggle1Class">
 
 - [x]  element.classList的length属性 
-
 	oDiv.classList.length;         
 
 - [x]  add(class1, class2, ...)-----在元素中添加一个或多个类名         
-
 	oDiv.classList.add('addClass');          
 
 - [x] contains(class)----返回布尔值，判断指定的类名是否存在。----true - 元素包已经包含了该类名,false - 元素中不存在该类名         
