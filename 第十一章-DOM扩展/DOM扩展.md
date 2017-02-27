@@ -48,5 +48,8 @@ ex:<div class="bd user disabled div containClass removeClass toggle1Class">
 	移除一个 class: element.classList.toggle("classToRemove", false);          
 	添加一个 class: element.classList.toggle("classToAdd", true); 
 	
-	oDiv.classList.toggle('toggle1Class');          
+	oDiv.classList.toggle('toggle1Class');
+### 焦点管理
+- [x] document.activeElement----引用DOM中获得焦点的元素，返回获得焦点的元素
+- [x] document.hasFocus()---判断某个元素是否获得焦点，返回true或者false
               
