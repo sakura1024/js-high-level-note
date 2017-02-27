@@ -30,17 +30,17 @@ ex:<div class="bd user disabled div containClass removeClass toggle1Class">
 
 - [x]  element.classList的length属性 
 
-oDiv.classList.length;         
+	oDiv.classList.length;         
 
 - [x]  add(class1, class2, ...)-----在元素中添加一个或多个类名         
 
-oDiv.classList.add('addClass');          
+	oDiv.classList.add('addClass');          
 
 - [x] contains(class)----返回布尔值，判断指定的类名是否存在。----true - 元素包已经包含了该类名,false - 元素中不存在该类名         
-var bool=oDiv.classList.contains('containClass');            
+	var bool=oDiv.classList.contains('containClass');            
 
 - [x] remove(class1, class2, ...)---移除元素中一个或多个类名。         
-oDiv.classList.remove('removeClass');         
+	oDiv.classList.remove('removeClass');         
 
 - [x] toggle(class, true|false)----	在元素中切换类名。         
 	第一个参数为要在元素中移除的类名，并返回 false。          
