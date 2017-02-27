@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div class="bd user disabled" id="div">classList</div>
+		<script type="text/javascript">
+//		<!--不使用classLIst属性，删除多个类名中的一个类名时-->
+/*
+			var oDiv=document.querySelector('#div');
+			var classNames=oDiv.className.split(' ');
+			console.log(classNames); //数组--["bd", "user", "disabled"]
+			//删除user
+			for (var i = 0; i < classNames.length; i++) {
+				if(classNames[i]=="user"){
+					break;
+				}
+			}
+			//数组中删除某一项
+			classNames.splice(i,1);  //改变了原有数组
+			console.log(classNames);  //["bd", "disabled"]
+			oDiv.className=classNames.join(' ');
+			console.log(oDiv.className);  //'bd disabled'
+*/
+		//使用classLIst属性，删除多个类名中的一个类名时
+		var oDiv=document.querySelector('#div');
+		oDiv.classList.remove('user');
+		console.log(oDiv.classList);
+		</script>
+	</body>
+</html>

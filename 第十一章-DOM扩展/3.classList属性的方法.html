@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="bd user disabled div containClass removeClass toggle1Class">
+			
+		</div>
+		<script type="text/javascript">
+			var oDiv=document.querySelector('.div');
+			//element.classList的长度属性：length
+			console.log(oDiv.classList.length);   //7
+			//add(class1, class2, ...)-----在元素中添加一个或多个类名
+			oDiv.classList.add('addClass');
+			//contains(class)----返回布尔值，判断指定的类名是否存在。----true - 元素包已经包含了该类名,false - 元素中不存在该类名
+			var bool=oDiv.classList.contains('containClass');
+			console.log(bool);   //true
+			//remove(class1, class2, ...)---移除元素中一个或多个类名。
+			oDiv.classList.remove('removeClass');
+			/**
+			 * toggle(class, true|false)----	在元素中切换类名。
+			 * 第一个参数为要在元素中移除的类名，并返回 false。 
+				如果该类名不存在则会在元素中添加类名，并返回 true。 
+
+			 *第二个是可选参数，是个布尔值用于设置元素是否强制添加或移除类，不管该类名是否存在。例如：
+				移除一个 class: element.classList.toggle("classToRemove", false); 
+				添加一个 class: element.classList.toggle("classToAdd", true);
+			 */
+			oDiv.classList.toggle('toggle1Class');
+			
+		</script>
+	</body>
+</html>
