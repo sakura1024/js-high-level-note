@@ -62,4 +62,6 @@ ex:<div class="bd user disabled div containClass removeClass toggle1Class">
 	 document.body;  //引用文档的body元素
 	 document.head;  //引用文档的head元素（h5新增属性）
 	 //引用文档head属性的另一种方式
-	 document.getElementsByTagName('head')[0];           
+	 document.getElementsByTagName('head')[0];  
+###  document.charset---文档字符集属性
+	console.log(document.charset); //UTF-8         
