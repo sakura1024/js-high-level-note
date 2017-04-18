@@ -88,3 +88,23 @@ oDiv.dataset.name=null;
 delete oDiv.dataset.src; 
 ### innerHTML性能问题
 	每设置一次innerHTML，则会创建一次HTML解析器，该解析器是在浏览器级别上
+
+### 锚点设置的三种方式
+- [x] a标签的href属性
+    对应的锚点内容的展示方式：
+    1.a--id
+    2.a--name
+    3.element--id
+- [x] css样式element:target
+   ```
+    <a href="#div1">div1</a>
+    <div style="width: 100px;height: 3000px;background: pink"></div>
+    <div id="div1" style="width: 100px;height: 100px;border: 1px solid #ccc;">div1</div>
+
+    样式：
+    div:target{
+        background: red;
+    }
+   ```
+- [x] js-scrollIntoView()
+    obj.scrollIntoView();
