@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ccc;
+            color: pink;
+        }
+        .div:after{
+            content: "";
+            display: inline-block;
+            width: 50px;
+            height:50px;
+            background-color: rgb(255,0,0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="div">
+        <p class="p">段落</p>
+        <p><i>斜体</i></p>
+    </div>
+    <script type="text/javascript">
+        //getComputedStyle(目标元素，伪元素字符串)
+        //如果不需要伪元素字符串信息，第二个参数可以为null
+        //该方法返回的是一个对象，类似于style对象
+        var oDiv=document.querySelector('.div');
+        console.log(getComputedStyle(oDiv,null));
+        var oWidth=getComputedStyle(oDiv,null).width;
+        console.log(oWidth);                                             //100px
+        var oAfter=getComputedStyle(oDiv,'after').backgroundColor;
+        console.log(oAfter);                                             //rgb(255,0,0)
+    </script>
+
+</body>
+</html>

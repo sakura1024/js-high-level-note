@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .div{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="div">
+    hello
+</div>
+<script type="text/javascript">
+
+    //不常用，样式表中：删除规则*****兼容性
+    var sheet=document.styleSheets[0];
+    function  deleteRule(sheet,index) {
+        if(sheet.deleteRule){
+            sheet.deleteRule(index);
+        }else if(sheet.removeRule){
+            sheet.removeRule(index);
+        }
+    }
+    console.log(sheet);
+    deleteRule(sheet,0);
+    console.log(sheet);
+</script>
+</body>
+</html>

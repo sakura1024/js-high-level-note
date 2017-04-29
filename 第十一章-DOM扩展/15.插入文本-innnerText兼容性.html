@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <p>hello</p>
+        <a href="javascript:;">链接</a>
+    </div>
+    <script type="text/javascript">
+
+        //innerText不支持 火狐 浏览器
+        // 火狐的兼容性问题：textContent属性----来自DOM3  支持高级浏览器和火狐
+
+        //获取innerText不支持
+        function getInnerText(element){
+            return typeof element.textContent==='string'?element.textContent:element.innerText;
+        }
+
+        //设置innerText
+        function setInnerText(element,text){
+            if(typeof element.textContent==='string'){   //火狐及高级浏览器
+                element.textContent=text;
+            }else{
+                element.innerText=text;    //火狐之外的低版本浏览器
+            }
+        }
+        var oCon=document.querySelector('.container');
+        setInnerText(oCon,"调用函数")
+    </script>
+</body>
+</html>

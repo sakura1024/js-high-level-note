@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    外面
+    <p>hello</p>
+    <a href="javascript:;">链接</a>
+</div>
+<script  type="text/javascript">
+
+    var oCon=document.querySelector('.container');
+    console.log(oCon.outerText);
+    oCon.innerText=oCon.outerText;
+    oCon.innerText="我是外面";
+    console.log(oCon.outerText);
+
+
+
+
+
+</script>
+</body>
+</html>

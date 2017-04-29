@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>style对象</title>
+</head>
+<body>
+<div class="di" style="color: red;">
+    <p style="background: yellow;">段落</p>
+    <b>粗体</b>
+</div>
+<script type="text/javascript">
+
+    var obj=document.querySelector('.di');
+    var len=obj.children[0].style.length;
+    console.log(len);   //10
+     //    background-image
+     //    background-position-x
+     //    background-position-y
+     //    background-size
+     //    background-repeat-x
+     //    background-repeat-y
+     //    background-attachment
+     //    background-origin
+     //    background-clip
+     //    background-color
+
+    console.log(obj.children[0].style[0]);  //background-image
+    console.log(obj.children[0].style.background); //yellow
+
+    //cssText快速设置一个元素的多个行内样式
+    obj.style.cssText="width:100px;height:100px;border: 1px solid #ccc;";  //此时元素原本的字色-- 红色  不起作用，已经被覆盖
+    obj.style.cssText="width:100px;height:100px;border: 1px solid #ccc;color: pink;";  //此时元素的字色-- 粉色
+</script>
+</body>
+</html>

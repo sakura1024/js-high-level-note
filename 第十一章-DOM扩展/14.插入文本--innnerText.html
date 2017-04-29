@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <p>hello</p>
+        <a href="javascript:;">链接</a>
+    </div>
+    <script  type="text/javascript">
+
+        //innerText属性:设置innerText属性,只会生成当前节点的一个子文本节点，
+        //并且为了确保只生成一个子文本节点，会对子文本节点中的内容进行HTML编码，类似 < 会转化成 &lt；
+        //利用以上两个特性，可以过滤掉HTML标签
+        var oCon=document.querySelector('.container');
+        console.log(oCon.innerText);
+
+        //innerText属性可以过滤掉原有父元素中子元素的HTML标签，只留下相应的文本
+
+        oCon.innerText=oCon.innerText;
+
+
+
+
+
+
+    </script>
+</body>
+</html>
