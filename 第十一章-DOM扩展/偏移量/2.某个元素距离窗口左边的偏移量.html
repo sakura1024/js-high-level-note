@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .div{
+            position: relative;
+            background: red;
+            width: 400px;
+            height:400px;
+        }
+        .div1{
+            position: absolute;
+            left: 50px;
+            width: 200px;
+            height:400px;
+            background: green;
+
+        }
+        p{
+            position: absolute;
+            left: 100px;
+            width: 50px;
+            height:400px;
+            background: blue;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<table border="1px solid #ccc;">
+    <tr class="tr1">
+        <td class="td1">1.1</td>
+        <td>1.2</td>
+    </tr>
+    <tr class="tr2">
+        <td>2.1</td>
+        <td>2.2</td>
+    </tr>
+</table>
+<div class="div">
+    <div class="div1">
+        <p class="p">段落</p>
+    </div>
+</div>
+<script type="text/javascript">
+    //获取某个元素到文档的左边界的偏移量
+    function getLeft(element) {
+        var left=element.offsetLeft;
+        var current=element.offsetParent;  //body 的相对父级为 null
+        while (current!=null){
+            left+=current.offsetLeft;
+            current=current.offsetParent;
+        }
+        return left;
+
+    }
+    var oP=document.querySelector('p');
+    console.log(getLeft(oP));
+
+
+    //获得到文档顶部的偏移量  同理
+
+    function getTop(element) {
+        var top=element.offsetTop;
+        var current=element.offsetParent;  //body 的相对父级为 null
+        while (current!=null){
+            top+=current.offsetTop;
+            current=current.offsetParent;
+        }
+        return top;
+
+    }
+    var oP=document.querySelector('p');
+    console.log(getTop(oP));
+</script>
+</body>
+</html>
