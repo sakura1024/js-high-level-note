@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .div{
+            position: relative;
+            background: red;
+            width: 400px;
+            height:400px;
+        }
+        .div1{
+            position: absolute;
+            left: 50px;
+            width: 200px;
+            height:400px;
+            background: green;
+
+        }
+        p{
+            position: absolute;
+            left: 100px;
+            width: 50px;
+            height:400px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <table border="1px solid #ccc;">
+        <tr class="tr1">
+            <td class="td1">1.1</td>
+            <td>1.2</td>
+        </tr>
+        <tr class="tr2">
+            <td>2.1</td>
+            <td>2.2</td>
+        </tr>
+    </table>
+    <div class="div">
+       <div class="div1">
+           <p class="p">段落</p>
+       </div>
+    </div>
+    <script type="text/javascript">
+        //body的相对父级是 null
+        //td 的相对父级是  table
+        //offsetParent  当前元素最近的定位父元素，没有定位父元素，则一路找到body
+
+
+        var oParent=document.querySelector('.tr1').children[0].offsetParent;
+        console.log(oParent);    // td 的 offsetParent 是 table
+        var oP=document.querySelector('p').offsetParent;   //p 的 offsetParent 是 .div1
+        var oDiv1=document.querySelector('.div1').offsetParent;   //div1 的 offsetParent 是 .div
+        var oDiv=document.querySelector('.div').offsetParent;   //div 的 offsetParent 是 body
+        var oBody=document.querySelector('body').offsetParent;   //div 的 offsetParent 是 null
+        console.log(oP);
+        console.log(oDiv1);
+        console.log(oDiv);
+        console.log(oBody);
+        console.log(document.querySelector('p').offsetLeft);  //100
+        console.log(document.querySelector('.div1').offsetLeft);   //50
+        console.log(document.querySelector('.div').offsetLeft);   //8
+    </script>
+</body>
+</html>
