@@ -20,9 +20,12 @@
     oBtn.addEventListener('click',function () {
         alert("DOM2级事件处理程序：第 2 个事件处理程序");
     },false);
+    oBtn.addEventListener('click',function () {
+        alert(this);
+    },false);
 
-    var oBtn1=document.querySelector('#btn1')
-
+    var oBtn1=document.querySelector('#btn1');
+    //removeEventListener：不能删除 函数为匿名函数的事件处理程序
     function handler() {
         alert("为删除事件准备的");
     }
