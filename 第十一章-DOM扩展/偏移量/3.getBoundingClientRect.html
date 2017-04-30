@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        .div{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background: red;
+        }
+        .div1{
+            width: 200px;
+            height:200px;
+            background: yellow;
+            margin-left: 50px;
+        }
+        .p{
+            position: absolute;
+            width: 100px;
+            height:100px;
+            background: pink;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        <div class="div1">
+            <p class="p"></p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        //element.getBoundingClientRect():返回一个对象，该对象5个属性：top，bottom，left，right, width, height
+        //top:    元素距离页面视口 顶边 的距离
+        //bottom: 元素 底边 距离页面视口 顶边 的距离
+        //left:   元素距离页面视口 左边 的距离
+        //right:  元素 右边 距离页面视口 左边 的距离
+        //width： 元素的宽度
+        //height：元素的高度
+
+
+        var oP=document.querySelector('.p');
+        var oPosition=oP.getBoundingClientRect();
+        console.log(oPosition);   //ClientRect {top: 0, right: 200, bottom: 100, left: 100, width: 100…}
+    </script>
+</body>
+</html>
