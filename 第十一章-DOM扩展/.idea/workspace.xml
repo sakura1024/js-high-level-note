@@ -23,59 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="14.插入文本--innnerText.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/14.插入文本--innnerText.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="15.插入文本-innnerText兼容性.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/15.插入文本-innnerText兼容性.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-              <folding>
-                <marker date="1493438561000" expanded="true" signature="31:895" ph="..." />
-                <marker date="1493438561000" expanded="true" signature="38:98" ph="..." />
-                <marker date="1493438561000" expanded="true" signature="105:887" ph="..." />
-                <marker date="1493438561000" expanded="true" signature="133:203" ph="..." />
-                <marker date="1493438561000" expanded="true" signature="239:879" ph="..." />
-                <marker date="1493438561000" expanded="true" signature="250:327" ph="//..." />
-                <marker date="1493438561000" expanded="true" signature="392:499" ph="{...}" />
-                <marker date="1493438561000" expanded="true" signature="566:777" ph="{...}" />
-                <marker date="1493438561000" expanded="true" signature="621:691" ph="{...}" />
-                <marker date="1493438561000" expanded="true" signature="695:767" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="10.插入标记-innerhtml、outerhtml、innertext.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/10.插入标记-innerhtml、outerhtml、innertext.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="1.a标签href属性--锚点设置.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/锚点的三种设置方式/1.a标签href属性--锚点设置.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="26" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="26" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="2.element:target样式-设置锚点.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/锚点的三种设置方式/2.element:target样式-设置锚点.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -91,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DOM扩展.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DOM扩展.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DOM扩展.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="133" column="76" selection-start-line="133" selection-start-column="76" selection-end-line="133" selection-end-column="76" />
+            <state relative-caret-position="517">
+              <caret line="164" column="61" selection-start-line="164" selection-start-column="61" selection-end-line="164" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -111,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="19.样式表--删除规则--兼容.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="19.样式表--删除规则--兼容.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/19.样式表--删除规则--兼容.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
@@ -121,11 +68,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="16.outerText.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/16.outerText.html">
+      <file leaf-file-name="13.contains().html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/13.contains().html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+            <state relative-caret-position="165">
+              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1.遍历body的所有子元素.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/遍历/1.遍历body的所有子元素.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1.offsetParent.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/偏移量/1.offsetParent.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="48" column="54" selection-start-line="46" selection-start-column="8" selection-end-line="48" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2.某个元素距离窗口左边的偏移量.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/偏移量/2.某个元素距离窗口左边的偏移量.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="57" column="5" selection-start-line="48" selection-start-column="4" selection-end-line="57" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="3.getBoundingClientRect.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/偏移量/3.getBoundingClientRect.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="41" column="22" selection-start-line="35" selection-start-column="8" selection-end-line="41" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -169,9 +156,14 @@
         <option value="$PROJECT_DIR$/16.outerText.html" />
         <option value="$PROJECT_DIR$/17.clone().html" />
         <option value="$PROJECT_DIR$/style对象.html" />
-        <option value="$PROJECT_DIR$/DOM扩展.md" />
         <option value="$PROJECT_DIR$/18.获取非行内样式---getComputedStyle().html" />
         <option value="$PROJECT_DIR$/19.样式表--删除规则--兼容.html" />
+        <option value="$PROJECT_DIR$/偏移量/offsetParent.html" />
+        <option value="$PROJECT_DIR$/偏移量/1.offsetParent.html" />
+        <option value="$PROJECT_DIR$/偏移量/2.某个元素距离窗口左边的偏移量.html" />
+        <option value="$PROJECT_DIR$/偏移量/3.getBoundingClientRect.html" />
+        <option value="$PROJECT_DIR$/遍历/1.遍历body的所有子元素.html" />
+        <option value="$PROJECT_DIR$/DOM扩展.md" />
       </list>
     </option>
   </component>
@@ -226,6 +218,34 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="第十一章-DOM扩展" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="第十一章-DOM扩展" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="第十一章-DOM扩展" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="遍历" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="第十一章-DOM扩展" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="第十一章-DOM扩展" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="偏移量" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -310,20 +330,20 @@
       <workItem from="1492482612304" duration="4625000" />
       <workItem from="1493429781227" duration="442000" />
       <workItem from="1493436422994" duration="2745000" />
-      <workItem from="1493439612443" duration="6839000" />
+      <workItem from="1493439612443" duration="11578000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14651000" />
+    <option name="totallyTimeSpent" value="19390000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -604,14 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/13.contains().html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/锚点的三种设置方式/1.a标签href属性--锚点设置.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -689,14 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DOM扩展.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="133" column="76" selection-start-line="133" selection-start-column="76" selection-end-line="133" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/18.获取非行内样式---getComputedStyle().html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -709,6 +713,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/偏移量/3.getBoundingClientRect.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="41" column="22" selection-start-line="35" selection-start-column="8" selection-end-line="41" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/偏移量/1.offsetParent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="48" column="54" selection-start-line="46" selection-start-column="8" selection-end-line="48" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/偏移量/2.某个元素距离窗口左边的偏移量.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="57" column="5" selection-start-line="48" selection-start-column="4" selection-end-line="57" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/13.contains().html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/遍历/1.遍历body的所有子元素.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DOM扩展.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="164" column="61" selection-start-line="164" selection-start-column="61" selection-end-line="164" selection-end-column="61" />
           <folding />
         </state>
       </provider>

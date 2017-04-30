@@ -132,3 +132,34 @@ delete oDiv.dataset.src;
 ### style对象---获取／设置行内样式
     cssText：同时设置一个元素的多个行内样式
     ex：obj.style.cssText="width:100px;height:100px;border: 1px solid #ccc;";
+
+### offsetParent
+        body的相对父级是 null
+        td 的相对父级是  table
+        offsetParent  当前元素最近的定位父元素，没有定位父元素，则一路找到body
+
+
+### 获取元素距离视口的距离（元素到视口的左偏移量）
+    ```
+    function getLeft(element) {
+            var left=element.offsetLeft;
+            var current=element.offsetParent;  //body 的相对父级为 null
+            while (current!=null){
+                left+=current.offsetLeft;
+                current=current.offsetParent;
+            }
+            return left;
+
+    }
+    ```
+
+### element.getBoundingClientRect():返回一个对象，该对象5个属性：top，bottom，left，right, width, height
+    top:    元素距离页面视口 顶边 的距离
+    bottom: 元素 底边 距离页面视口 顶边 的距离
+    left:   元素距离页面视口 左边 的距离
+    right:  元素 右边 距离页面视口 左边 的距离
+    width： 元素的宽度
+    height：元素的高度
+
+### 遍历body的所有子元素
+    document.querySelector('body').getElementsByTagName('*');
