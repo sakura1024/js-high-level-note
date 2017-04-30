@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件兼容函数</title>
+</head>
+<body>
+
+<input type="button" id="btn" value="按钮">
+
+<script type="text/javascript">
+
+    var EventUtil={
+
+        //目标元素 事件类型 事件处理程序
+        addEvent:function (ele,type,handler) {
+            if(ele.addEventListener){                       //DOM2级事件处理程序
+                ele.addEventListener(type,handler,false);
+            }else if(ele.attachEvent){                       //IE级事件处理程序
+                ele.attachEvent('on'+type,handler);
+            }else{
+                ele['on'+type]=handler;                       //DOM0级事件处理程序
+            }
+
+        },
+        deleteEvent:function (ele,type,handler) {
+            if(ele.removeEventListener()){
+                ele.removeEventListener(type,handler,false);
+            }else if(ele.detachEvent()){
+                ele.detachEvent('on'+type,handler);
+            }else{
+                ele['on'+type]=null;
+            }
+
+        }
+    }
+    
+    function event() {
+        alert(this);
+    }
+
+    var oBtn=document.querySelector('#btn');
+    EventUtil.addEvent(oBtn,'click',event);
+    EventUtil.deleteEvent(oBtn,'click',event);
+</script>
+
+</body>
+</html>
