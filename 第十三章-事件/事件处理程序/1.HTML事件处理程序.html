@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="按钮" onclick="alert('第一个按钮')">
+<input type="button" value="第二个按钮" onclick="alert(this.value)">
+
+<!--可以省略this-->
+<input type="button" value="第三个按钮" onclick="alert(value)">
+<input type="button" value="事件类型" onclick="alert(event.type)">
+<input type="button" value="事件目标" onclick="alert(event.target)">
+
+
+<!--HTML事件处理程序的缺点1(时差问题)：调用函数尚未加载完毕时，点击之后不起作用；
+    解决办法：try...catch
+-->
+<input type="button" value="try--catch" onclick="try{show();}catch(ex){console.log('页面尚未加载完毕');}">
+
+<!--HTML事件处理程序的缺点2：html代码和js代码紧密耦合，若要更换事件处理程序，要修改html代码和js代码
+-->
+
+<script type="text/javascript">
+    setTimeout(function show(){
+        console.log('123');
+    },3000);
+</script>
+
+</body>
+</html>
