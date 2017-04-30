@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="button" value="点击事件" id="btn">
+<input type="button" value="删除事件" id="btn1">
+
+<script type="text/javascript">
+    //DOM2级事件处理程序好处：可以添加多个事件处理程序
+    //下面的点击事件：点击一次，执行两个事件处理程序
+    var oBtn=document.querySelector('#btn')
+    //三个参数：事件名，事件处理程序，事件处理程序执行阶段（true：捕获阶段执行；false：冒泡阶段执行）
+    oBtn.addEventListener('click',function () {
+        alert("DOM2级事件处理程序：第 1 个事件处理程序");
+    },false);
+    oBtn.addEventListener('click',function () {
+        alert("DOM2级事件处理程序：第 2 个事件处理程序");
+    },false);
+
+    var oBtn1=document.querySelector('#btn1')
+
+    function handler() {
+        alert("为删除事件准备的");
+    }
+    oBtn1.addEventListener('click',handler,false);   // 添加事件
+    oBtn1.removeEventListener('click',handler,false);   //删除事件
+
+
+
+</script>
+
+</body>
+</html>
