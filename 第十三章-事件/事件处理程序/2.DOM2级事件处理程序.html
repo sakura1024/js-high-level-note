@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="button" value="点击事件" id="btn">
+<script type="text/javascript">
+    var oBtn=document.querySelector('#btn')
+    oBtn.onclick=function () {
+        console.log(this.value);
+        console.log("3秒之后将会删除该事件");
+    }
+
+    setTimeout(function () {
+        oBtn.onclick=null;  //删除事件
+    },3000)
+
+</script>
+
+</body>
+</html>
