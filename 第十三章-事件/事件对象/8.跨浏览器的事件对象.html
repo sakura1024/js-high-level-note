@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跨浏览器的事件对象</title>
+</head>
+<body>
+<a href="#">链接</a>
+<script type="text/javascript">
+    // event.preventDefault() 阻止事件的默认行为
+    var oA=document.querySelector('a');
+    var EventUtil={
+        //添加事件
+        addEvent:function (ele,type,handler) {
+            if(ele.addEventListener){
+                ele.addEventListener(type,handler,false);
+            }else if(ele.attachEvent){
+                ele.attachEvent(type,handler);
+            }else {
+                ele['on'+type]=handler;
+            }
+        },
+        //获取事件对象event
+        getEvent:function (event) {
+            return event?event:window.event;
+        },
+        //获取触发事件的目标
+        getTarget:function (event) {
+            return event.target||event.srcElement;
+        },
+        //阻止默认事件
+        preventDefault:function (event) {
+            if(event.preventDefault){
+                event.preventDefault();
+            }else {
+                event.returnValue=false;
+            }
+        },
+        //删除事件
+        deleteEvent:function (ele,type,handler) {
+            if(ele.removeEventListener){
+                ele.removeEventListener(type,handler,false);
+            }else if(ele.detachEvent){
+                ele.detachEvent(type,handler);
+            }else{
+                ele['on'+type]=null;
+            }
+        },
+        //取消事件冒泡
+        stopPropagation:function (event) {
+            if(event.stopPropagation){
+                event.stopPropagation();
+            }else{
+                event.cancelable=true;
+            }
+        }
+    };
+    function aa(event) {
+        event= EventUtil.getEvent(event);       //获取事件对象
+        var target=EventUtil.getTarget(event);  //获取触发事件的目标
+        target.style.color='red';
+        EventUtil.preventDefault(event);        //阻止默认事件（a链接跳转）
+
+    }
+    EventUtil.addEvent(oA,'click',aa);
+
+</script>
+
+</body>
+</html>
