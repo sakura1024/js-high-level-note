@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>点击</p>
+<script type="text/javascript">
+    // event.stopPropagation() 取消事件冒泡或者事件捕获
+    document.querySelector('p').onclick=function(event) {
+        alert('点击');
+        event.stopPropagation(); //取消事件冒泡
+    }
+
+</script>
+
+</body>
+</html>
