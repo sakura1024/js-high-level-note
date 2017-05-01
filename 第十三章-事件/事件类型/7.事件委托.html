@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件委托</title>
+</head>
+<body>
+<ul id="list">
+    <li id="dosomething">dosomething</li>
+    <li id="sayhi">sayhi</li>
+    <li id="gosomewhere">gosomewhere</li>
+</ul>
+<script type="text/javascript">
+    //每个函数都是对象，都会占用内存，性能就越差
+    /*事件委托：
+        原理：事件冒泡
+        优点：只有一个事件处理程序，只操作一个dom元素；占用内存小，设置事件处理程序事件少，访问快，整体性能好
+        适合采用事件委托的事件类型有：click、mousedown、mouseup、keydown、keyup、keypress
+     */
+    var oList=document.querySelector('#list');
+    oList.onclick=function (event) {
+        var event=event||window.event;
+        switch(event.target.id){
+            case 'dosomething':
+                document.title="I change the document's title";
+                break;
+            case 'gosomewhere':
+                location.href="www.baidu.com";
+                break;
+            case 'sayhi':
+                alert('hi');
+                break;
+        }
+    }
+</script>
+
+</body>
+</html>
