@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="div">
+    <input type="button" id="btn">
+</div>
+<script type="text/javascript">
+    var oDiv=document.querySelector('.div');
+    var oBtn=document.querySelector('#btn');
+    /*
+    oBtn.onclick=function () {
+        oDiv.innerHTML="hello"; //这种情况下，input元素其实是被移除了，但是它的点击事件处理程序尚在内存中存在，耗费性能
+    }
+     */
+     //改进如下
+    oBtn.onclick=function () {
+        oBtn.onclick=null;   //移除事件处理程序
+        oDiv.innerHTML="hello";
+    }
+    //页面卸载时，移除相应的事件处理程序 window.onload=function(){...}
+
+</script>
+
+</body>
+</html>
