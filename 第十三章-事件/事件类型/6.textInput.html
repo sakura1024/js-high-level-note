@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="text">
+<script type="text/javascript">
+    //textInput事件-------但是谋私任何浏览器都不能用
+    //textInput事件：可编辑的文本框才起作用
+    var oText=document.querySelector('#text');
+    oText.ontextInput=function (event) {
+        var ev=event||window.event;
+        console.log(ev.data);
+        console.log('0000');
+    }
+</script>
+
+</body>
+</html>

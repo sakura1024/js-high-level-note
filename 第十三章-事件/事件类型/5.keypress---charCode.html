@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="text">
+<script type="text/javascript">
+    //keypress: 用户按下键盘上的字符键时，触发此事件
+
+    //keypress:  event.charCode
+    var oText=document.querySelector('#text');
+    oText.onkeypress=function (event) {
+        var ev=event||window.event;
+        if(typeof ev.charCode==='number'){
+            console.log(ev.charCode);  //获取字符编码
+            console.log(String.fromCharCode(ev.charCode));  //将字符编码转化为对应字符
+        }else{
+            console.log(ev.keyCode);
+            console.log(String.fromCharCode(ev.charCode));
+        }
+
+    }
+
+</script>
+
+</body>
+</html>
