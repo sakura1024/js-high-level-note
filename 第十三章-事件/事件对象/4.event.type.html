@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一个函数处理同个元素的多个事件</title>
+</head>
+<body>
+    <input type="button" id="btn" value="可点击可mouseover可mouseout">
+    <script type="text/javascript">
+
+
+        // 一个函数处理同个元素的多个事件
+        var oBtn=document.querySelector('#btn');
+        oBtn.onclick=handler;
+        oBtn.onmouseover=handler;
+        oBtn.onmouseout=handler;
+
+        function handler(event) {
+            switch(event.type){
+                case 'click': alert('click');break;
+                case 'mouseover': alert('mouseover');break;
+                case 'mouseout': alert('mouseout');break;
+            }
+
+        }
+    </script>
+
+</body>
+</html>
