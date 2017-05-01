@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>target和currentTarget的区别</title>
+</head>
+<body>
+    <ul id="ul">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script type="text/javascript">
+        //两者在没有冒泡的情况下，是一样的值，但在用了事件委托的情况下，就不一样了
+
+        //event.target: 触发事件的元素
+        //event.currentTarget: 绑定事件的元素
+
+
+        var oUl=document.querySelector('#ul');
+        oUl.onclick=function (event) {
+            console.log(event.target);          //<li>1</li>
+            console.log(event.currentTarget);  //ul
+            console.log(this);
+            console.log(event.target.innerText)  //
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="btn" value="添加"/>
+<ul id="test">
+    <li node-type="1">111</li>
+    <li node-type="2">222</li>
+    <li node-type="3">333</li>
+    <li>
+        <ul>
+            <li>123</li>
+        </ul>
+    </li>
+</ul>
+<script type="text/javascript">
+    var oTest=document.getElementById('test');
+    document.getElementById("btn").onclick=function () {
+        var oLi=document.createElement("li")
+        oLi.innerText="444";
+        oLi.setAttribute("node-type","444");
+        oTest.appendChild(oLi)
+    }
+
+    function delegate(element, targetSelector, type, handler) {
+        element.addEventListener(type, function(event) {
+            var targets = Array.prototype.slice.call(element.querySelectorAll(targetSelector));
+            var target = event.target;
+            if (targets.indexOf(target) != -1) {
+                return handler.apply(target, arguments);
+            }
+        }, false);
+    }
+
+    delegate(oTest,'li','click',function (e) {
+        console.log(this.getAttribute('node-type'));
+    })
+
+
+</script>
+
+</body>
+</html>
