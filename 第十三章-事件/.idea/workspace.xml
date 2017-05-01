@@ -22,44 +22,104 @@
     <favorites_list name="第十三章-事件" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6458333">
+    <splitter split-orientation="horizontal" split-proportion="0.80042917">
       <split-first>
         <leaf>
-          <file leaf-file-name="事件.md" pinned="false" current-in-tab="true">
+          <file leaf-file-name="事件.md" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/事件.md">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="364">
-                  <caret line="84" column="11" selection-start-line="84" selection-start-column="11" selection-end-line="84" selection-end-column="11" />
+                <state relative-caret-position="537">
+                  <caret line="179" column="31" selection-start-line="179" selection-start-column="31" selection-end-line="179" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="4.event.type.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/事件对象/4.event.type.html">
+          <file leaf-file-name="6.textInput.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/事件类型/6.textInput.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="24" column="9" selection-start-line="17" selection-start-column="8" selection-end-line="24" selection-end-column="9" />
+                <state relative-caret-position="225">
+                  <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="2.DOM事件对象的属性.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/事件对象/2.DOM事件对象的属性.html">
+          <file leaf-file-name="7.事件委托.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/事件类型/7.事件委托.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="7" />
+                <state relative-caret-position="255">
+                  <caret line="17" column="69" selection-start-line="17" selection-start-column="69" selection-end-line="17" selection-end-column="69" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="3.原生js实现事件委托.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/事件对象/3.原生js实现事件委托.html">
+          <file leaf-file-name="8.适时的移除事件处理程序.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/事件类型/8.适时的移除事件处理程序.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="525">
-                  <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+                <state relative-caret-position="345">
+                  <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="4.键码--keyCode.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/事件类型/4.键码--keyCode.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="315">
+                  <caret line="21" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="7" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="5.keypress---charCode.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/事件类型/5.keypress---charCode.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="165">
+                  <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="31" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="3.修改键.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/事件类型/3.修改键.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="13" column="25" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="25" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="2.鼠标事件--clentY和pageY.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/事件类型/2.鼠标事件--clentY和pageY.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="315">
+                  <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="8.跨浏览器的事件对象.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/事件对象/8.跨浏览器的事件对象.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="460">
+                  <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="1.scroll事件.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/事件类型/1.scroll事件.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="135">
+                  <caret line="9" column="93" selection-start-line="8" selection-start-column="16" selection-end-line="9" selection-end-column="93" />
                   <folding />
                 </state>
               </provider>
@@ -72,8 +132,8 @@
           <file leaf-file-name="5.阻止事件的默认行为.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/事件对象/5.阻止事件的默认行为.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="13" selection-end-column="5" />
+                <state relative-caret-position="135">
+                  <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="15" selection-end-column="9" />
                   <folding />
                 </state>
               </provider>
@@ -104,7 +164,20 @@
         <option value="$PROJECT_DIR$/事件对象/3.html" />
         <option value="$PROJECT_DIR$/事件对象/4.event.type.html" />
         <option value="$PROJECT_DIR$/事件对象/5.阻止事件的默认行为.html" />
+        <option value="$PROJECT_DIR$/事件对象/6.取消事件的进一步捕获或冒泡.html" />
+        <option value="$PROJECT_DIR$/事件对象/7.事件的阶段--event.eventPhase.html" />
+        <option value="$PROJECT_DIR$/事件对象/8.跨浏览器的事件对象.html" />
+        <option value="$PROJECT_DIR$/事件类型/1.scroll事件.html" />
+        <option value="$PROJECT_DIR$/事件类型/2.鼠标事件--clientX和clientY.html" />
+        <option value="$PROJECT_DIR$/事件类型/2.鼠标事件--clentY和pageY.html" />
+        <option value="$PROJECT_DIR$/事件类型/3.修改键.html" />
+        <option value="$PROJECT_DIR$/事件类型/3.键码--keyCode.html" />
+        <option value="$PROJECT_DIR$/事件类型/4.键码--keyCode.html" />
+        <option value="$PROJECT_DIR$/事件类型/5.keypress---charCode.html" />
+        <option value="$PROJECT_DIR$/事件类型/6.textInput.html" />
         <option value="$PROJECT_DIR$/事件.md" />
+        <option value="$PROJECT_DIR$/事件类型/7.事件委托.html" />
+        <option value="$PROJECT_DIR$/事件类型/8.适时的移除事件处理程序.html" />
       </list>
     </option>
   </component>
@@ -115,9 +188,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="709" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -173,6 +245,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="事件类型" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="第十三章-事件" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="第十三章-事件" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="事件对象" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -188,6 +274,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -248,18 +335,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493545357417</updated>
-      <workItem from="1493545358720" duration="12125000" />
+      <workItem from="1493545358720" duration="21185000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12125000" />
+    <option name="totallyTimeSpent" value="21185000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="709" extended-state="6" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08498809" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25893566" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -349,14 +436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/事件对象/1.DOM中的事件对象.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/事件对象/2.DOM事件对象的属性.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -381,18 +460,116 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/事件对象/1.DOM中的事件对象.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/事件对象/6.取消事件的进一步捕获或冒泡.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="7" />
+          <folding>
+            <marker date="1493607829000" expanded="true" signature="147:329" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/事件对象/7.事件的阶段--event.eventPhase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="55" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/事件对象/5.阻止事件的默认行为.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="15" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/事件对象/8.跨浏览器的事件对象.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/事件类型/1.scroll事件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="93" selection-start-line="8" selection-start-column="16" selection-end-line="9" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/事件类型/2.鼠标事件--clentY和pageY.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/事件类型/3.修改键.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/事件类型/4.键码--keyCode.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/事件类型/5.keypress---charCode.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="13" selection-end-column="5" />
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/事件.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="84" column="11" selection-start-line="84" selection-start-column="11" selection-end-line="84" selection-end-column="11" />
+        <state relative-caret-position="537">
+          <caret line="179" column="31" selection-start-line="179" selection-start-column="31" selection-end-line="179" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/事件类型/6.textInput.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/事件类型/7.事件委托.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="69" selection-start-line="17" selection-start-column="69" selection-end-line="17" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/事件类型/8.适时的移除事件处理程序.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
           <folding />
         </state>
       </provider>
