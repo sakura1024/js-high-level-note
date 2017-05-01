@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="text">
+<script type="text/javascript">
+    //键盘事件：keydown、keypress、keyup
+    //keydown:  用户按下键盘上的任意键时，触发此事件
+    //keypress: 用户按下键盘上的字符键时，触发此事件
+    //keyup: 用户释放键盘上的键时，触发此事件
+
+    //键码:event.keyCode
+    var oText=document.querySelector('#text');
+    oText.onkeydown=function (event) {
+        var ev=event||window.event;
+        console.log(ev.keyCode);
+    }
+
+</script>
+
+</body>
+</html>
