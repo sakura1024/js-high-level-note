@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>单例模式</title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height:100px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+	<input type="button" value="单机" onclick="createMask()">
+		<script type="text/javascript">
+			var mySingleton=function (fn) {
+				var result;
+				return function () {
+					return result||(result=fn.apply(this,arguments));
+				}
+			};
+
+
+			var createMask=mySingleton(function () {
+				return document.body.appendChild(document.createElement('div'));
+			});
+		</script>
+	</body>
+</html>
