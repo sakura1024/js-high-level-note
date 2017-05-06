@@ -1,4 +1,4 @@
-###Welcome to use MarkDown
+
 ### match         
 1. 语法：stringObject.match( regExp )         
 1. 作用：match()函数用于使用指定的正则表达式模式在当前字符串中进行匹配查找，并返回数组形式的查找结果。         
