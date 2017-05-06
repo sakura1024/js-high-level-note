@@ -1,10 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title></title>
 </head>
 <body>
-$END$
+<script type="text/javascript">
+
+    var arr = ['0', '1', '2', '3', '4', '5', '7', '6', '5', '4', '3', '2', '1', '0'];
+
+    //颠倒数组 未改变原数组
+    console.log(arr.reverse());
+
+    //现将数组转为字符串 未改变原数组
+    console.log(arr.toString());
+
+    //以逗号分割原数组
+     var str=arr.join(',');
+     console.log(str);
+
+    // 将str以逗号分割为数组
+    var arr1=str.split(',');
+    console.log(arr1);
+
+    //数组头部添加三个元素 改变原数组
+    arr1.unshift('A','B','C');
+    console.log(arr1);
+
+    //在数组中输出 下标为3-7的元素 未改变原数组
+    var arr2=arr.slice(3,8);
+    console.log(arr2);
+
+    //连接两个数组concat 生成新数组  未改变原数组
+    var arr3=arr1.concat(arr2);
+    console.log(arr3);
+
+    //复制数组arr
+    var arr4=arr.slice();
+
+    console.log(arr4);
+
+    //arr4排序：升序
+    function sortNum(a,b){
+        return a-b;
+    }
+    arr4.sort(sortNum);   //改变原数组
+    console.log(arr4)
+
+    //数组去重
+
+    //原数组上去改变
+    var arr5=arr.slice();
+    for(var i=0;i<arr5.length-1;i++){
+        for(var j=i+1;j<arr5.length;j++){
+            if(arr5[i]===arr5[j]){
+                arr5.length--;
+                for (var z=j;z<arr5.length;z++){
+                    arr[z]=arr[z+1];
+                }
+            }
+        }
+
+    }
+    console.log(arr5);
+
+
+
+    //数组去重
+    //原数组上去改变
+    var arr6=arr.slice();
+    for(var i=0;i<arr6.length-1;i++){
+        if(arr6.slice(i+1).indexOf(arr6[i])>0){
+            arr6.splice(arr6.slice(i+1).indexOf(arr6[i])+i+1,1);
+        }
+    }
+    console.log(arr6);
+
+
+
+    //数组去重
+    //生成新数组
+    var arr7=arr.slice();
+    var newArr=['0'];
+    for(var i=1;i<arr7.length-1;i++){
+        if(newArr.indexOf(arr[i])===-1){
+            newArr.push(arr[i]);
+        }
+    }
+    console.log(newArr);
+
+
+    //数组去重
+    //生成新数组
+    //    var arr = ['0', '1', '2', '3', '4', '5', '7', '6', '5', '4', '3', '2', '1', '0'];
+    var arr8=arr.slice();
+    var newArr1=['0'];
+    for(var i=1;i<arr8.length-1;i++){
+        var temp=0;
+        for(var j=0;j<newArr1.length;j++){
+            if(arr8[i]!==newArr1[j]){
+                if(++temp===newArr1.length){
+                    newArr1.push(arr8[i])
+                }
+            }else{
+                break;
+            }
+
+        }
+
+    }
+    console.log(newArr1);
+
+
+    //数组去重
+    //生成新数组
+    //    var arr = ['0', '1', '2', '3', '4', '5', '7', '6', '5', '4', '3', '2', '1', '0'];
+    var arr9=arr.slice();
+    var newArr2=['0'];
+    for(var i=1;i<arr9.length-1;i++){
+        for(var j=0,len=newArr2.length;j<len;j++){
+            if(arr9[i]!==newArr2[j]){
+                if(++temp===newArr2.length){
+                    newArr2.push(arr9[i])
+                }
+            }else{
+                break;
+            }
+
+        }
+
+    }
+    console.log(newArr2);
+</script>
 </body>
 </html>
