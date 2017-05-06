@@ -120,8 +120,8 @@
     for(var i=1;i<arr9.length-1;i++){
         for(var j=0,len=newArr2.length;j<len;j++){
             if(arr9[i]!==newArr2[j]){
-                if(++temp===newArr2.length){
-                    newArr2.push(arr9[i])
+                if(j===len-1){
+                    newArr2.push(arr9[i]);
                 }
             }else{
                 break;
