@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    var obj={
+        num:13,
+        str:'string',
+        boolean: true,
+        undefined:undefined,
+        arr:[1,2,3],
+        fun1:function () {
+            console.log('function');
+        },
+        person:{
+            age:13,
+            name:'tom'
+        }
+
+    }
+    for(var i in obj){
+        judge(obj[i]);
+    }
+
+    function judge(value) {
+        if(typeof value==='number'){
+            console.log('number');
+        }else if(typeof value==='string'){
+            console.log('string');
+        }else if(typeof value==='boolean'){
+            console.log('boolean');
+        }else if(typeof value==='undefined'){
+            console.log('undefined');
+        }else if(typeof value==='object'){
+            var val=Object.prototype.toString.call(value);
+            switch (val){
+                case '[object Function]':console.log('Function');break;
+                case '[object Array]':console.log('Array');break;
+                case '[object Object]':console.log('Object');break;
+
+            }
+        }
+    }
+
+</script>
+
+</body>
+</html>
