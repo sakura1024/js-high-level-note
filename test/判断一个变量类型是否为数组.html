@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    var key=[1,2,3];
+    console.log(key instanceof Array);
+
+    console.log(typeof key);//Object
+
+    console.log(Array.isArray(key));
+
+    console.log(typeof Object.prototype.toString.call(key));
+    console.log(Object.prototype.toString.call(key)==='[object Array]');
+    console.log(typeof  12);
+    console.log(typeof 'hello');
+    console.log(typeof true);
+    console.log(typeof undefined);
+    console.log(Object.prototype.toString.call(key));
+
+
+
+</script>
+</body>
+</html>
