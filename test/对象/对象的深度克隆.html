@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的深度克隆</title>
+</head>
+<body>
+<script type="text/javascript">
+    var ob1={
+        a:1,
+        b:2,
+        fn:function () {
+            console.log(11)
+        },
+        obj1:{
+          c:3, d:4
+        }
+    }
+    
+    function deepClone(obj) {
+        var result={};
+        for(var i in obj){
+            if(typeof obj[i]!=='object'){
+                result[i]=obj[i];
+            }else{
+                result[i]=deepClone(obj[i]);
+            }
+
+        }
+        return result;
+    }
+    var ob2=deepClone(ob1);
+    console.log(ob2); //ob2.obj1.c=3;
+    ob1.obj1.c=33;
+    console.log(ob1);     //ob1.obj1.c=33;
+    console.log(ob2);     //ob2.obj1.c=3;
+</script>
+</body>
+</html>
