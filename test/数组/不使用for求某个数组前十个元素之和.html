@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--不使用for求某个数组前十个元素之和-->
+<script type="text/javascript">
+    var arr=[1,2,3,4,5,5,4,3,2,1,0];
+//    var sum=arr.slice(0,10).reduce(function (pre,cur) {
+//        return pre+cur;
+//    });
+//    console.log(sum);
+    var i=0;
+    function sum(arr,n) {
+       if(i===n) {
+           return 0;
+       }else{
+           console.log(arr[i])
+           return arr[i++]+sum(arr,n);
+       }
+    }
+    var sum1=sum(arr,10)
+    console.log(sum1);
+</script>
+</body>
+</html>
