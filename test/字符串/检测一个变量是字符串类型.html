@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    var str='123asd';
+    //法1
+    console.log(typeof str==='string'); //true
+    //法2
+    console.log(str.constructor===String); //true
+
+    console.log(str instanceof String); //false
+    //法3
+    console.log(Object.prototype.toString.call(str)==='[object String]')
+
+
+</script>
+
+</body>
+</html>
