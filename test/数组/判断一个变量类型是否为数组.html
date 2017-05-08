@@ -8,21 +8,24 @@
 <script type="text/javascript">
 
     var key=[1,2,3];
+
+    //法1
     console.log(key instanceof Array);
 
     console.log(typeof key);//Object
-
+    //法2
     console.log(Array.isArray(key));
 
     console.log(typeof Object.prototype.toString.call(key));
+    //法3
     console.log(Object.prototype.toString.call(key)==='[object Array]');
     console.log(typeof  12);
     console.log(typeof 'hello');
     console.log(typeof true);
     console.log(typeof undefined);
     console.log(Object.prototype.toString.call(key));
-
-
+    //法4
+    console.log(key.constructor===Array); //true
 
 </script>
 </body>
