@@ -47,8 +47,10 @@
     arr4.sort(sortNum);   //改变原数组
     console.log(arr4)
 
-    //数组去重
 
+    /*-------数组去重开始--------*/
+
+    //数组去重1
     //原数组上去改变
     var arr5=arr.slice();
     for(var i=0;i<arr5.length-1;i++){
@@ -66,7 +68,7 @@
 
 
 
-    //数组去重
+    //数组去重2
     //原数组上去改变
     var arr6=arr.slice();
     for(var i=0;i<arr6.length-1;i++){
@@ -78,7 +80,7 @@
 
 
 
-    //数组去重
+    //数组去重3
     //生成新数组
     var arr7=arr.slice();
     var newArr=['0'];
@@ -90,7 +92,7 @@
     console.log(newArr);
 
 
-    //数组去重
+    //数组去重4
     //生成新数组
     //    var arr = ['0', '1', '2', '3', '4', '5', '7', '6', '5', '4', '3', '2', '1', '0'];
     var arr8=arr.slice();
@@ -112,7 +114,7 @@
     console.log(newArr1);
 
 
-    //数组去重
+    //数组去重5
     //生成新数组
     //    var arr = ['0', '1', '2', '3', '4', '5', '7', '6', '5', '4', '3', '2', '1', '0'];
     var arr9=arr.slice();
@@ -131,6 +133,80 @@
 
     }
     console.log(newArr2);
+
+    /*-------数组去重结束--------*/
+
+
+
+    /*-------冒泡排序开始--------*/
+    //冒泡排序1   [1,2,3,4,6,5,4,3,2,4]
+    //字符元素数组---转换为---数值元素数组
+    var initArr=arr.map(function (item) {
+        return parseInt(item);
+    });
+    var initArr1=initArr.slice();
+    console.log("冒泡排序前："+initArr1);   //数值数组
+    for(var i=0;i<initArr1.length-1;i++){
+       for (var j=0;j<initArr1.length-1;j++){
+            if(initArr1[j]>initArr1[j+1]){
+                var temp=initArr1[j];
+                initArr1[j]=initArr1[j+1];
+                initArr1[j+1]=temp;
+            }
+       }
+    }
+    console.log("冒泡排序后："+initArr1);
+
+    //冒泡排序2优化
+    //注解：每轮冒泡结束之后，都有一个最大的值，冒到最后，即比较一轮，确定一个值的位置，所以比较完一轮，则少比较一个数====》initArr1.length-1-i
+    var initArr2=initArr.slice();
+    for(var i=0;i<initArr2.length-1;i++){
+        for (var j=0;j<initArr2.length-1-i;j++){   //initArr1.length-1====>initArr1.length-1-i
+            if(initArr2[j]>initArr2[j+1]){
+                var temp=initArr2[j];
+                initArr2[j]=initArr2[j+1];
+                initArr2[j+1]=temp;
+            }
+        }
+    }
+    console.log("冒泡排序后："+initArr2);
+    //冒泡排序3优化
+    //有时候比较到第二、三、四...轮时，则已经排好序，如何在排好序时，即使停止后续无用的循环
+
+    var initArr3=initArr.slice();
+    for(var i=0;i<initArr3.length-1;i++){
+        var flag=false;
+        for (var j=0;j<initArr3.length-1-i;j++){   //initArr1.length-1====>initArr1.length-1-i
+            if(initArr3[j]>initArr3[j+1]){
+                var temp=initArr3[j];
+                initArr3[j]=initArr3[j+1];
+                initArr3[j+1]=temp;
+                flag=true;
+            }
+        }
+        if(!flag){
+            break;
+        }
+    }
+    console.log("冒泡排序后："+initArr3);
+
+
+    /*-------冒泡排序结束--------*/
+
+    //数组乱排
+    var sortArr=initArr3.slice();  //[0,0,1,1,2,2,3,3,4,4,5,5,6,7]
+    var luanArr=[];
+    for(var i=0,len=sortArr.length;i<len;i++){
+        //i:0~~~len-1
+        var index=parseInt(Math.random()*(sortArr.length-1-0+1)+0);
+        luanArr.push(sortArr[index]);
+        sortArr.splice(index,1);
+    }
+    console.log("数组乱排后："+luanArr);
+
+
+
+
 </script>
 </body>
 </html>
